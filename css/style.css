@@ -5,3 +5,41 @@ a{
   vertical-align: middle;
   text-align: center;
 }
+
+/*Remove the following when testing is complete.*/
+body{
+  background-color: rgb(0,0,0);
+  margin: 10px;
+  padding: 10px;
+}
+
+h1{
+  color: rgb(3, 251, 44);
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+p{
+  color: rgb(3, 251, 44);
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+div{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border: 2px dashed #f69c55;
+}
+
+span{
+  color: rgb(3, 251, 44);
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: normal;
+}
