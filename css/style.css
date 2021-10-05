@@ -7,6 +7,17 @@ body{
   padding: 2px;
 }
 
+p{
+  color: rgb(0, 50, 50); /*Figure out good color combination.*/
+  left-margin: 240px;
+  right-margin: 240px;
+  top-margin: 5px;
+  bottom-margin: 5px;
+  padding: 0px;
+  text-align: center;
+  
+}
+
 a{
   color: rgb(0, 0, 0);
   margin: 0px;
@@ -41,9 +52,4 @@ h3{
   text-align: center;
 }
 
-p{
-  color: rgb(0, 50, 50); /*Figure out good color combination.*/
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-}
+
