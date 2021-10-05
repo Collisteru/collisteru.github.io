@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(255,255,255);
+  background-color: rgb(223,219,200);
   margin: 240px;
   padding: 2px;
 }
@@ -18,7 +18,26 @@ body{
   padding: 10px;
 }
 
+ul {
+  text-align: center;
+  list-style: inside;
+}
+
 h1{
+  color: rgb(0, 0, 100); /*Give headers a slightly different color?*/
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+h2{
+  color: rgb(0, 0, 100); /*Give headers a slightly different color?*/
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+h3{
   color: rgb(0, 0, 100); /*Give headers a slightly different color?*/
   margin: 0px;
   padding: 0px;
