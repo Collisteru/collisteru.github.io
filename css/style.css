@@ -1,6 +1,9 @@
 body{
   background-color: rgb(223,219,200);
-  margin: 240px;
+  left-margin: 240px;
+  right-margin: 240px;
+  top-margin: 5px;
+  bottom-margin: 5px;
   padding: 2px;
 }
 
