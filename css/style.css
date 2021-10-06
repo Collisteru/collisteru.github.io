@@ -11,7 +11,6 @@ DFDBC8 Off-white background
 
 body{
   background-color: rgb(223,219,200);
-   color: rgb(0, 100, 100); /*Figure out good color combination.*/
   /*Top Right Bottom Left*/
   margin: 5px 480px 10px 480px;
   text-align: center;
@@ -31,7 +30,9 @@ a{
 ul {
   text-align: center;
   list-style: inside;
-
+}
+  
+  
 h1{
   font-size: 3.75em;
   color: rgb(48, 40, 67);
