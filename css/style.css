@@ -8,27 +8,43 @@ DFDBC8 Off-white background
 
 */
 
+
+
 html {
   background-color: rgb(36, 23, 99);
   height: 100%;
 }
 
 
-
 body{
-  
   background-color: rgb(223, 219, 200);
   
   /* Top Right Bottom Left */
-  
   /*Change margins back to 375 px when you can.*/
-  margin: auto 375px auto 375px;
+  margin: auto 30px auto 30
+px;
   text-align: center;
   font-size: 1.25em;
   font-family: Helvetica, Arial, sans-serif;
   color: rgb(71, 66, 42);
   min-height: 100%;
 }
+
+
+
+
+/*~~DIV CLASSES~~*/
+
+/*Center-aligned text for headings, equations, and individual links.*/
+.centered {
+  padding-left: 70px;
+  padding-right: 70px;
+  color: rgb(255, 0, 0);
+  white-space:pre;
+  
+}
+
+/*~~OTHER TEXT CLASSES~~*/
 
 /*Center-justified text for main content paragraphs*/
 p {
@@ -38,28 +54,25 @@ p {
   padding-right: 70px;
 }
 
-/*Center-aligned text for headings, equations, and individual links.*/
-
-a {
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
 ul {
   text-align: center;
   list-style: inside;
 
 }
+
+/*Heading One: Article Titles*/
 h1{
   font-size: 3.75em;
   color: rgb(48, 40, 67);
 }
 
+/*Heading Two: Section Titles*/
 h2{
   font-size: 2em;
   color: rgb(48, 40, 67);
 }
 
+/*Heading Three: SubsectionTitles*/
 h3{
   font-size: 1em;
 }
