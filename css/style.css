@@ -27,6 +27,7 @@ body{
   font-family: Helvetica, Arial, sans-serif;
   color: rgb(71, 66, 42);
   min-height: 100%;
+  border-radius: 25px;
 }
 
 
