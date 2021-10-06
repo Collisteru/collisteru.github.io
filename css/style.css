@@ -18,6 +18,7 @@ html {
 body{
   
   background-color: rgb(223, 219, 200);
+  
   /* Top Right Bottom Left */
   
   margin: auto 325px auto 325px;
@@ -26,6 +27,11 @@ body{
   font-family: Helvetica, Arial, sans-serif;
   color: rgb(71, 66, 42);
   min-height: 100%;
+}
+
+p {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 ul {
@@ -46,5 +52,3 @@ h2{
 h3{
   font-size: 1em;
 }
-
-
