@@ -36,6 +36,8 @@ body{
 
 /*Center-aligned text for headings, equations, and individual links.*/
 .centered {
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 70px;
   padding-right: 70px;
   white-space:pre;
