@@ -13,6 +13,9 @@ p{
   right-margin: 240px;
   top-margin: 5px;
   bottom-margin: 5px;
+  
+  /*Top Right Bottom Left*/
+  margin: 5px 240px 10px 240px;
   padding: 0px;
   text-align: center;
 }
