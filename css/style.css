@@ -29,9 +29,17 @@ body{
   min-height: 100%;
 }
 
+/*Center-justified text for main content paragraphs*/
 p {
   text-align: justify;
   text-justify: inter-word;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/*Center-aligned text for headings, equations, and individual links.*/
+
+a {
   padding-left: 70px;
   padding-right: 70px;
 }
