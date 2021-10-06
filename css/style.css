@@ -12,7 +12,7 @@ DFDBC8 Off-white background
 body{
   background-color: rgb(223,219,200);
   /*Top Right Bottom Left*/
-  margin: 5px 480px 10px 480px;
+  margin: 5px 125px 10px 125px;
   text-align: center;
   font-size: 1.25em;
   font-family: "Apple Garamond", "Times New Roman", "Source Serif";
@@ -30,23 +30,20 @@ a{
 ul {
   text-align: center;
   list-style: inside;
+
 }
-  
-  
 h1{
   font-size: 3.75em;
   color: rgb(48, 40, 67);
 }
 
 h2{
-  /*Will h2 inherent from h1?*/
-  Not automatically!
   font-size: 2em;
   color: rgb(48, 40, 67);
 }
 
 h3{
-  
+  font-size: 1em;
 }
 
 
