@@ -9,28 +9,23 @@ DFDBC8 Off-white background
 */
 
 html {
-  color: rgb(36, 23, 99)
+  background-color: rgb(36, 23, 99);
   height: 100%;
-} 
+}
+
 
 
 body{
-  background-color: rgb(223,219,200);
-  /*Top Right Bottom Left*/
+  
+  background-color: rgb(223, 219, 200);
+  /* Top Right Bottom Left */
+  
   margin: auto 325px auto 325px;
   text-align: center;
   font-size: 1.25em;
   font-family: Helvetica, Arial, sans-serif;
   color: rgb(71, 66, 42);
   min-height: 100%;
-}
-
-p{
-  
-}
-
-a{
-  
 }
 
 ul {
