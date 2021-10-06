@@ -30,8 +30,10 @@ body{
 }
 
 p {
-  padding-left: 60px;
-  padding-right: 60px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 ul {
