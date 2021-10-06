@@ -21,8 +21,7 @@ body{
   
   /* Top Right Bottom Left */
   /*Change margins back to 375 px when you can.*/
-  margin: auto 30px auto 30
-px;
+  margin: auto 375px auto 375px;
   text-align: center;
   font-size: 1.25em;
   font-family: Helvetica, Arial, sans-serif;
