@@ -8,15 +8,9 @@ body{
 }
 
 p{
-  color: rgb(0, 50, 50); /*Figure out good color combination.*/
-  left-margin: 240px;
-  right-margin: 240px;
-  top-margin: 5px;
-  bottom-margin: 5px;
-  
+  color: rgb(50, 0, 0); /*Figure out good color combination.*/
   /*Top Right Bottom Left*/
   margin: 5px 240px 10px 240px;
-  padding: 0px;
   text-align: center;
 }
 
