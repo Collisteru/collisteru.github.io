@@ -10,7 +10,7 @@ body{
 p{
   color: rgb(50, 0, 0); /*Figure out good color combination.*/
   /*Top Right Bottom Left*/
-  margin: 5px 240px 10px 240px;
+  margin: 5px 480px 10px 480px;
   text-align: center;
 }
 
