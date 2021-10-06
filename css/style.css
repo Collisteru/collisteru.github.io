@@ -20,14 +20,17 @@ body{
   background-color: rgb(223, 219, 200);
   
   /* Top Right Bottom Left */
-  /*Change margins back to 375 px when you can.*/
-  margin: auto 375px auto 375px;
+  /*Change margins back to 450 px when you can.*/
+  margin: auto 450px 10px 450px;
   text-align: center;
   font-size: 1.25em;
   font-family: Helvetica, Arial, sans-serif;
   color: rgb(71, 66, 42);
   min-height: 100%;
-  border-radius: 25px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 5 px;
+  border-color: #4A482B;
 }
 
 
