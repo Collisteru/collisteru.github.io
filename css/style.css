@@ -15,9 +15,9 @@ body{
   /*Top Right Bottom Left*/
   margin: 5px 480px 10px 480px;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.25em;
   font-family: "Apple Garamond", "Times New Roman", "Source Serif";
-  font-color: rgb(71, 66, 42);
+  color: rgb(71, 66, 42);
 }
 
 p{
@@ -34,7 +34,7 @@ ul {
 
 h1{
   font-size: 60px;
-  font-color: rgb(48, 40, 67);
+  color: rgb(48, 40, 67);
 }
 
 h2{
