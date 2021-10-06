@@ -12,6 +12,8 @@ p{
   /*Top Right Bottom Left*/
   margin: 5px 480px 10px 480px;
   text-align: center;
+  font-size: 20px;
+  font-family: "Apple Garamond", "Times New Roman", "Source Serif";
 }
 
 a{
