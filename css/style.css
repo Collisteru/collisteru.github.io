@@ -10,13 +10,15 @@ DFDBC8 Off-white background
 
 html {
   background-color: rgb(36, 23, 99);
-  min-height: 100%;
   background-image: images/SpaceBG.jpg;
+  
+  background-color: rgb(36, 23, 99);
+  min-height: 100%;
 }
 
 
 body{
-  background-color: rgb(36, 23, 99);
+  
   /* Top Right Bottom Left */
   /*Change margins back to 450 px when you can.*/
   margin: 50px 450px 117px 450px;
