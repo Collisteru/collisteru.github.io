@@ -48,6 +48,12 @@ body{
   
 }
 
+#header {
+  /*This is a box!*/
+  background-color: rgb(100, 200, 255);
+  color: rgb(0, 0, 0);
+}
+
 /*~~OTHER TEXT CLASSES~~*/
 
 /*Center-justified text for main content paragraphs*/
