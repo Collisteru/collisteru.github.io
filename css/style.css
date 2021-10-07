@@ -60,7 +60,6 @@ body{
 #contentbox {
   background-color: rgb(223, 219, 200);
   color: rgb(71, 66, 42);
-  min-height: 375 px;
   margin-bottom: 80 px;
   border-radius: 15 px;
   border-style: solid;
