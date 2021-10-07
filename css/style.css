@@ -44,13 +44,13 @@ body{
   /*This is a box!*/
   
   background-color: rgb(223, 219, 200);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 75px;
-  line-height: 75px;
+  margin-top: 20 px;
+  margin-bottom: 20 px;
+  height: 75 px;
+  line-height: 75 px;
   text-align: center;
   color: rgb(71, 66, 42);
-  border-radius: 15px;
+  border-radius: 15 px;
   border-style: solid;
   border-width: 15 px;
   border-color: #4A482B;
@@ -60,7 +60,9 @@ body{
 #contentbox {
   background-color: rgb(223, 219, 200);
   color: rgb(71, 66, 42);
-  border-radius: 15px;
+  min-height: 375 px;
+  margin-bottom: 80 px;
+  border-radius: 15 px;
   border-style: solid;
   border-width: 15 px;
   border-color: #4A482B;
