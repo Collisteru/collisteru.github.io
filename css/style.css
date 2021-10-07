@@ -1,11 +1,9 @@
 /*
 Color palette hexadecimals:
-
 DFDBC8 Off-white background
 47422A Text
 302843 Headings, Titles
 241763 Space Background
-
 */
 
 
@@ -17,20 +15,15 @@ html {
 
 
 body{
-  background-color: rgb(223, 219, 200);
-  
+  background-color: rgb(36, 23, 99);
   /* Top Right Bottom Left */
   /*Change margins back to 450 px when you can.*/
-  margin: 50px 450px 117px 450px;
+  margin: 50px 50px 117px 50px;
   text-align: center;
   font-size: 1.25em;
   font-family: Helvetica, Arial, sans-serif;
   color: rgb(71, 66, 42);
   min-height: 770px;
-  border-radius: 15px;
-  border-style: solid;
-  border-width: 15 px;
-  border-color: #4A482B;
 }
 
 
@@ -47,7 +40,32 @@ body{
   white-space:pre;
 }
 
+#headbox {
+  /*This is a box!*/
+  
+  background-color: rgb(223, 219, 200);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  color: rgb(71, 66, 42);
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 15 px;
+  border-color: #4A482B;
+  
+}
 
+#contentbox {
+  background-color: rgb(223, 219, 200);
+  color: rgb(71, 66, 42);
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 15 px;
+  border-color: #4A482B;
+  
+}
 
 /*~~OTHER TEXT CLASSES~~*/
 
