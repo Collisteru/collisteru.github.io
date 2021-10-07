@@ -18,7 +18,7 @@ body{
   background-color: rgb(36, 23, 99);
   /* Top Right Bottom Left */
   /*Change margins back to 450 px when you can.*/
-  margin: 50px 50px 117px 50px;
+  margin: 50px 450px 117px 450px;
   text-align: center;
   font-size: 1.25em;
   font-family: Helvetica, Arial, sans-serif;
