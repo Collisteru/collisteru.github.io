@@ -35,7 +35,8 @@ body{
 /* Space Background */
 
 #spaceBG {
-  
+  background-image: url("images/SpaceBG.png");
+  /*
   position: relative;
   
   height: 1000px;
@@ -43,8 +44,8 @@ body{
   top: 0px;
   left: 0px;
   
-  background-image: url(images/SpaceBG.png);
-  /*
+  
+  
   background-repeat: repeat;
   background-size: 100% 100%;
   */
