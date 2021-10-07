@@ -37,7 +37,7 @@ body{
 /* Space Background */
 
 #spaceBG {
-  position: absolute;
+  position: relative;
   
   height: 180%;
   width: 100%;
