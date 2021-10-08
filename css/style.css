@@ -132,3 +132,22 @@ h2{
 h3{
   font-size: 1em;
 }
+
+
+/* TABLES */
+
+table.default {
+  border: 4px double;
+  border-color: black;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: right;
+  width: 80%;
+}
+
+table.default tr, table.default td {
+  border: 1px solid;
+  width: 50%;
+  padding: 5px;
+  
+}
