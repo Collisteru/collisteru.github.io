@@ -36,20 +36,18 @@ body{
 
 #spaceBG {
   background-image: url("https://collisteru.github.io/images/SpaceBG.png");
-  /*
-  position: relative;
-  */
+  
+  position: fixed;
+  
   
   height: 1000px;
   width: 1000px;
   top: 0px;
   left: 0px;
-  
-  
-  /*
+
   background-repeat: repeat;
   background-size: 100% 100%;
-  */
+  
 }
 
 /*Center-aligned text for headings, equations, and individual links.*/
