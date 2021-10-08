@@ -25,6 +25,8 @@ body{
   font-family: Helvetica, Arial, sans-serif;
   color: rgb(71, 66, 42);
   min-height: 770px;
+  
+  background-image: url("images/SpaceBG.png");
 }
 
 
