@@ -65,8 +65,8 @@ body{
 #headbox {
   position: relative;
   height: 75px;
-  background-color: rgb(223, 219, 200);
-  
+  /* background-color: rgb(223, 219, 200); */
+  background-image: url("images/SpaceBG.png");
   text-align: center;
   color: rgb(71, 66, 42);
   margin-top: 20px;
