@@ -2,8 +2,11 @@ What do I want to do with this website?
 
 
 # Todo:
+* Create an essay directory with a table of essays and descriptions, sortable by topic and date
+
 * Under essays: a place for all my essays, written in Markdown and converted into HTMl format using Pandoc
 test
+
 * Color Palette
 
 
