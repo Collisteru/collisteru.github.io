@@ -11,6 +11,7 @@ DFDBC8 Off-white background
 html {
   min-height: 100%;
   background-color: rgb(36, 23, 99);
+  background-image: url("https://collisteru.github.io/images/SpaceBG.png");
 }
 
 
@@ -19,7 +20,7 @@ body{
   /* Top Right Bottom Left */
   /*Change margins back to 450 px when you can.*/
   
-  margin: 50px 450px 117px 450px;
+  margin: 50px 0px 117px 0px;
   text-align: center;
   font-size: 1.25em;
   font-family: Helvetica, Arial, sans-serif;
@@ -37,16 +38,14 @@ body{
 #spaceBG {
   background-image: url("https://collisteru.github.io/images/SpaceBG.png");
   
-  position: fixed;
-  
-  width: 100%;
-  height: 100%;
+  position: relative;
   
   top: 0px;
   left: 0px;
 
+  
   background-repeat: repeat;
-  background-size: 100% 100%;
+  background-attachment: scroll;
   
 }
 
@@ -62,9 +61,15 @@ body{
 
 #headbox {
   position: relative;
+  
   height: 75px;
+  width: 50%;
+  min-width: 400px;
+  margin: 0 auto;
+    
   background-color: rgb(223, 219, 200);
   text-align: center;
+  
   color: rgb(71, 66, 42);
   margin-top: 20px;
   margin-bottom: 20px;
@@ -77,6 +82,11 @@ body{
 }
 
 #mainbox {
+  
+  width: 50%;
+  min-width: 400px;
+  margin: 0 auto;
+  
   position: relative;
   background-color: rgb(223, 219, 200);
   color: rgb(71, 66, 42);
