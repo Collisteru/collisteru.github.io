@@ -115,12 +115,13 @@ a.headerLink {
 a.defaultLink:link {
   color: #003270;
   text-decoration: none;
-  
+  font-family: "Source Serif Regular";
 }
 
 a.defaultLink:visited {
   color: #25446A;
   text-decoration: none;
+  font-family: "Source Serif Regular";
 }
 
 /* ~~FONTS~~ */
