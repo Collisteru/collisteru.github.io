@@ -116,7 +116,16 @@ a.headerLink {
 @font-face {
   font-family: "Source Serif Regular";
   src: url(https://collisteru.github.io/fonts/SourceSerifPro-Regular.ttf);
+}
 
+@font-face {
+  font-family: "Source Serif Bold";
+  src: url(https://collisteru.github.io/fonts/SourceSerifPro-Black.ttf);
+}
+
+@font-face {
+  font-family: "Source Serif Italic";
+  src: url(https://collisteru.github.io/fonts/SourceSerifPro-Italic.ttf)
 }
 
 /* ~~TEXT CLASSES~~ */
