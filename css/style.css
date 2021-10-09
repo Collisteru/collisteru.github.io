@@ -111,6 +111,14 @@ a.headerLink {
   font-family: serif;
 }
 
+/* ~~FONTS~~ */
+
+@font-face {
+  font-family: "Source Serif Regular";
+  src: url(https://collisteru.github.io/fonts/SourceSerifPro-Regular.ttf);
+
+}
+
 /* ~~TEXT CLASSES~~ */
 
 /* Center-justified text for main content paragraphs */
@@ -146,7 +154,7 @@ h3{
 }
 
 
-/* TABLES */
+/* ~~TABLES~~ */
 
 table.default {
   border: 4px double;
