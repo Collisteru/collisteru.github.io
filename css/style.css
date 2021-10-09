@@ -150,12 +150,14 @@ ul {
 h1{
   font-size: 3.75em;
   color: rgb(48, 40, 67);
+  font-family: "Source Serif Bold";
 }
 
 /*Heading Two: Section Titles*/
 h2{
   font-size: 2em;
   color: rgb(48, 40, 67);
+  font-family: "Source Serif Bold";
 }
 
 /*Heading Three: SubsectionTitles*/
