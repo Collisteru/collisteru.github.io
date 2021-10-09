@@ -194,4 +194,6 @@ table.default tr, table.default td {
   border: 1px solid;
   width: 50%;
   padding: 5px;
+  font-family: "Source Serif Regular"
+  color: black;
 }
