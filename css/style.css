@@ -79,10 +79,7 @@ body{
   margin-bottom: 20px;
   line-height: 75px;
   
-  border-radius: 15px;
-  border-style: solid;
-  border-width: 4px;
-  border-color: #4A482B;
+ 
 }
 
 #mainbox {
@@ -98,10 +95,7 @@ body{
   margin-bottom: 80px;
   min-height: 600px;
   
-  border-radius: 15px;
-  border-style: solid;
-  border-width: 4px;
-  border-color: #4A482B;
+
 }
 
 /* ~~HEADING LINKS~~ */
