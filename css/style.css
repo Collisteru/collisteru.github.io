@@ -113,6 +113,20 @@ body{
   
 }
 
+.bottomScroll {
+  display: inline-block;
+  
+  width: 55%;
+  min-width: 400px;
+  background-position: left bottom;
+  margin-bottom: -57px;
+  height: 130px;
+
+  content: url(https://collisteru.github.io/art/scrollEndBottom.png);
+  
+  
+}
+
 /* ~~HEADING LINKS~~ */
 
 a.headerLink {
