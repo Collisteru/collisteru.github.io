@@ -207,6 +207,33 @@ h3{
   font-size: 1em;
 }
 
+/* ~~LINKS~~ */
+
+/*Unvisited*/
+a.standard:link{
+  color: rgb(71, 66, 42);
+  text-decoration: underline;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: "Source Serif Regular";
+}
+
+/*Visited*/
+a.standard:visited{
+  color: rgba(71, 66, 42, 0.6);
+}
+
+/*Hover*/
+a.standard:hover {
+  color:rgb(0, 0, 0);
+
+}
+
+
+
+
+
+
 
 /* ~~TABLES~~ */
 
