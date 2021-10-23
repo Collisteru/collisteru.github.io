@@ -68,8 +68,8 @@ body{
   height: 75px;
   width: 50%;
   min-width: 400px;
-  margin: auto;
   
+  margin:auto;
     
   background-color: rgb(223, 219, 200);
   text-align: center;
@@ -78,7 +78,11 @@ body{
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 75px;
-  
+
+  border-radius: 20px;
+  border-color: rgb(161, 158, 145);
+  border-width: 4px;
+  border-style:solid;
  
 }
 
