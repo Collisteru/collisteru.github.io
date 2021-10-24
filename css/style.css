@@ -106,6 +106,21 @@ body{
 
 }
 
+/* ~~IMAGES~~ */
+
+.earthWrapper {
+  position:relative;
+}
+
+.earthWrapper img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  min-height: 100%;
+  margin-bottom: -300px;
+}
+
 .upperScroll {
   display: inline-block;
   
@@ -130,6 +145,13 @@ body{
 
   content: url(https://collisteru.github.io/art/scrollEndBottom.png);
   
+  
+}
+
+.earth {
+  background-position: left bottom;
+  margin-bottom: 100px;
+  content: url(../art/earthInSpaceCropped.png);
   
 }
 
@@ -226,7 +248,6 @@ a.standard:visited{
 /*Hover*/
 a.standard:hover {
   color:rgb(0, 0, 0);
-
 }
 
 
