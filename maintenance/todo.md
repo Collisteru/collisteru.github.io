@@ -21,7 +21,7 @@ test
 
 ## Art:
 
-* Draw Earth image, replace at bottom
+
 
 
 
@@ -40,3 +40,4 @@ test
 * Draw full menu and single page layout. Keep in mind the eventual structure of the Ergodic Epic; you'll want to be able to include PDFs
 * Constrain scroll width so that resizing doesn't squish text
 * Draw space backgroud
+* Draw Earth image, replace at bottom

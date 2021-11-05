@@ -1,10 +1,15 @@
-/*
-Color palette hexadecimals:
-DFDBC8 Off-white background
-47422A Text
-302843 Headings, Titles
-241763 Space Background
-*/
+/* ~~COLOR PALLETTE~~ */
+
+:root {
+  --main-color:#DFDBC8;
+  --text:#47422A;
+  --heading:#302843;
+  --space-bg:#241763;
+  --heading-blue:#234c88;
+  --heading-red:#ba3b39;
+  --heading-green:#4e9a06;
+
+}
 
 
 
@@ -204,10 +209,55 @@ p {
   font-family: "Source Serif Regular";
 }
 
-ul {
-  text-align: center;
-  list-style: inside;
+strong {
+  color: black;
+  font-family: "Source Serif Bold";
+}
 
+em {
+  color: rgb(80, 80, 50);
+  font-family: "Source Serif Italic";
+
+}
+
+blockquote {
+  padding: 60px 80px 40px;
+  position: relative;
+  color:rgba(30, 30, 0)
+}
+
+blockquote::before{
+  color:black;
+  content: "";
+  top: 20px;
+  left: 50%;
+  margin-left: -100px;
+  position: absolute;
+  border-bottom: 3px solid rgb(0, 0, 0, 0.3);
+  height: 3px;
+  width: 200px;
+}
+
+blockquote::after{
+  color:black;
+  content: "";
+  bottom: 20px;
+  left: 50%;
+  margin-left: -100px;
+  position: absolute;
+  border-bottom: 3px solid rgb(0, 0, 0, 0.3);
+  height: 3px;
+  width: 200px;
+}
+
+blockquote p{
+  font-family: "Source Serif Italic"
+}
+
+blockquote p.attribution {
+  font-family: "Source Serif Regular";
+  color: black;
+  text-align: right;
 }
 
 /*Heading One: Article Titles*/
@@ -226,7 +276,34 @@ h2{
 
 /*Heading Three: SubsectionTitles*/
 h3{
-  font-size: 1em;
+  font-size: 1em; 
+  font-family: "Source Serif Regular"
+}
+
+h3.heading-blue{
+  color: var(--heading-blue);
+}
+
+h3.heading-red {
+  color: var(--heading-red)
+}
+
+h3.heading-green {
+  color: var(--heading-green)
+}
+
+/* ~~ LISTS ~~ */
+
+ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding: 0.5em 0 0 3em;
+  text-align: left;
+}
+
+ul li {
+  font-family: "Source Serif Regular";
+  color: rgb(71, 66, 42);
 }
 
 /* ~~LINKS~~ */
@@ -243,18 +320,14 @@ a.standard:link{
 /*Visited*/
 a.standard:visited{
   color: rgba(71, 66, 42, 0.6);
+  font-family: "Source Serif Regular";
 }
 
 /*Hover*/
 a.standard:hover {
   color:rgb(0, 0, 0);
+  font-family: "Source Serif Regular";
 }
-
-
-
-
-
-
 
 /* ~~TABLES~~ */
 
