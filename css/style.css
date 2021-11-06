@@ -101,13 +101,12 @@ body{
   background-color: rgb(223, 219, 200);
   color: rgb(71, 66, 42);
   
-  margin-bottom: 80px;
-  min-height: 600px;
+  margin-bottom: 60px;
+  min-height: 10px;
   margin-top: 0px;
   
   margin: 0 auto;
   padding-bottom: 20px;
-  
 
 }
 
@@ -115,6 +114,7 @@ body{
 
 .earthWrapper {
   position:relative;
+  margin-top: -40px;
 }
 
 .earthWrapper img {
@@ -309,7 +309,7 @@ ul li {
 /* ~~LINKS~~ */
 
 /*Unvisited*/
-a.standard:link{
+a:link{
   color: rgb(71, 66, 42);
   text-decoration: underline;
   text-align: justify;
@@ -318,13 +318,13 @@ a.standard:link{
 }
 
 /*Visited*/
-a.standard:visited{
+a:visited{
   color: rgba(71, 66, 42, 0.6);
   font-family: "Source Serif Regular";
 }
 
 /*Hover*/
-a.standard:hover {
+a:hover {
   color:rgb(0, 0, 0);
   font-family: "Source Serif Regular";
 }
