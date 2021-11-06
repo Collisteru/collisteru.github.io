@@ -369,8 +369,10 @@ table {
   margin: auto;
   width: 95%;
 
-  text-align: right;
+  text-align: left;
   font-family: "Source Serif Regular";
+
+  table-layout: fixed;
   
 
 
