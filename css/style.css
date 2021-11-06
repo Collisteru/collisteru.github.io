@@ -1,3 +1,11 @@
+/*
+~~A BRIEF STYLE GUIDE~~
+- Defualt behavior should be defined without classes
+- Use color, font, and image variables whenever possible
+- Reuse classes as little as is feasible
+*/
+
+
 /* ~~COLOR PALLETTE~~ */
 
 :root {
@@ -297,6 +305,8 @@ h3.heading-green {
 
 /* ~~ LISTS ~~ */
 
+/* ~~Unordered Lists~~ */
+
 ul {
   list-style-type: disc;
   list-style-position: outside;
@@ -307,6 +317,24 @@ ul {
 ul li {
   font-family: "Source Serif Regular";
   color: rgb(71, 66, 42);
+}
+
+/* ~~Ordered Lists~~ */
+
+ol {
+  margin-left: 6%;
+  list-style-position: outside;
+  padding: 0.5em 0 0 3em;
+  text-align: left;
+
+}
+
+li {
+
+  color: rgb(71, 66, 42);
+  font-family: "Source Serif Regular";
+
+
 }
 
 /* ~~LINKS~~ */
@@ -361,7 +389,7 @@ table tr, table td {
 table tr.headRow {
   text-align: center;
   font-family: "Source Serif Bold";
-  text-size: 1em;
+  text-: 1em;
 }
 
 /* ~~TABLE OF WRITINGS~~ */
@@ -375,3 +403,38 @@ table {
 /* ~~TABLE OF CONTENTS ~~ */
 
 /* TODO */
+
+/* ~~IMAGES~~ */
+
+img {
+  max-width: 100%;
+
+}
+
+/* ~~CODE BLOCKS~~ */
+
+code {
+  background-color: black;
+  color: greenyellow;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: gray;
+  border-style: solid;
+  display: block;
+  max-width: 90%;
+  margin: auto;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+pre {
+  white-space:pre-line;
+
+}
+
+/* ~~MISCELLANEOUS~~ */
+
+hr {
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  max-width: 30%;
+}
