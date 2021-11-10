@@ -2,31 +2,15 @@ What do I want to do with this website?
 
 
 # Todo:
-* Create an essay directory with a table of essays and descriptions, sortable by topic and date
-
-* Under essays: a place for all my essays, written in Markdown and converted into HTMl format using Pandoc
-
-* Upload the following writings:
-* Book Review: Homo Deus
-* Antidotes to Number Numbness
-* Python Puzzle
-
-
+* Add mobile support
 
 
 
 ## Blog Formatting:
-
+* Create an essay directory with a table of essays and descriptions, sortable by topic and date
 
 
 ## Art:
-
-
-
-
-
-
-* Add mobile support
 
 
 
@@ -37,7 +21,12 @@ What do I want to do with this website?
 * * Center-Justified text with wide margins
 * Color Palette
 * Change clicked link color to be more aesthetically pleasing
-* Draw full menu and single page layout. Keep in mind the eventual structure of the Ergodic Epic; you'll want to be able to include PDFs
+* Draw full menu and single page layout. You'll want to include PDFs
 * Constrain scroll width so that resizing doesn't squish text
 * Draw space backgroud
 * Draw Earth image, replace at bottom
+
+* Upload the following writings:
+* Book Review: Homo Deus
+* Antidotes to Number Numbness
+* Python Puzzle

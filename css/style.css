@@ -38,7 +38,7 @@ body{
   font-size: 1.25em;
   font-family: Helvetica, Arial, sans-serif;
   color: rgb(71, 66, 42);
-  min-height: 770px;
+  min-height: 100vh;
 }
 
 
@@ -124,7 +124,9 @@ body{
 /* ~~IMAGES~~ */
 
 .earthWrapper {
-  position:relative;
+  position:relative; /*Relative works */
+  bottom: 0;
+  height: 30vh;
 /*  margin-top: -40px;*/
 }
 
@@ -133,9 +135,9 @@ body{
   width: 100%;
   left: 0;
   bottom: 0;
-  min-height: 100%;
-  margin-bottom: -300px;
+  margin-bottom: -25%;
 }
+
 
 .upperScroll {
   display: inline-block;
