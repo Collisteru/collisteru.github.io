@@ -126,7 +126,7 @@ body{
 .earthWrapper {
   position:relative; /*Relative works */
   bottom: 0;
-  height: 30vh;
+  height: 100vh;
 /*  margin-top: -40px;*/
 }
 
