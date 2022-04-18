@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Collisteru's Personal Website
 
 A place to put:
@@ -9,3 +10,15 @@ A place to put:
 
 
 **Note:** Remember to clear the Chrome cache to check each update. Otherwise, your changes won't show up immediately.
+=======
+# Linguistory
+
+The web app that traces the ancestry of your writing.
+
+# Trello Board:
+
+[Trello Board](https://trello.com/b/N56TYKEA/linguistory-main)
+
+# Frontend Todos
+
+>>>>>>> 21e5183a66b18197f879d90aaf1728ed8aecdb20
