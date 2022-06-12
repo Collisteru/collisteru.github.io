@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Collisteru's Personal Website
 
 A place to put:
