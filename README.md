@@ -21,4 +21,3 @@ The web app that traces the ancestry of your writing.
 
 # Frontend Todos
 
->>>>>>> 21e5183a66b18197f879d90aaf1728ed8aecdb20
