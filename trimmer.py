@@ -84,7 +84,8 @@ class trimmer():
     def addToDir(self, fileURL, essayTitle, essayDescription):
         # We first modify DIRENTRY to make the custom entry we need
         myDirEntry = DIRENTRY
-        myDirEntry = re.sub('\{0\}', fileURL, myDirEntry)
+        myFileURL = re.sub('writing/', '', fileURL)
+        myDirEntry = re.sub('\{0\}', myFileURL, myDirEntry)
         myDirEntry = re.sub('\{1\}', essayTitle, myDirEntry)
         myDirEntry = re.sub('\{2\}', essayDescription, myDirEntry)
         # Next, we insert DIRENTRY into dir
