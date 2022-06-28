@@ -7,6 +7,11 @@
 import re
 import sys
 
+class AlreadyIndexedException(Exception):
+    def __init__(self):
+        print("This file has already been indexed!")
+        quit()
+
 
 DIR = "./writing/writingDirectory.html"
 
@@ -91,7 +96,11 @@ class trimmer():
         # Next, we insert DIRENTRY into dir
         with open(DIR, 'r+') as masterDir:
             dirText = masterDir.read()
-            dirText = re.sub('<!--\{7\}-->', myDirEntry, dirText)
-            masterDir.seek(0)
-            masterDir.truncate()
-            masterDir.write(dirText)
+            # As long as the file URL isn't anywhere to be found in dirText
+            if(not re.search(myFileURL, dirText)):
+                dirText = re.sub('<!--\{7\}-->', myDirEntry, dirText)
+                masterDir.seek(0)
+                masterDir.truncate()
+                masterDir.write(dirText)
+            else:
+                raise AlreadyIndexedException
