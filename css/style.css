@@ -154,12 +154,11 @@ body{
 
 .upperScroll {
   display: inline-block;
-  
   width: 50%;
   min-width: 400px;
   background-position: left bottom;
   margin-bottom: -57px;
-  height: 150px;
+  height: 155px;
 
   content: url(https://collisteru.github.io/art/scrollEnds.png);
   
