@@ -12,6 +12,10 @@ from trimmer import *
 # Argument 2: The full essay title
 # Argument 3: A short description of the essay
 
+class AlreadyWrappedException(Exception):
+    def __init__(self):
+        print("This class has already been wrapped!")
+        quit()
 
 # ./wrap.py testText.html testing... TEST TESTDSCRPT
 if __name__ == "__main__":
@@ -29,14 +33,17 @@ if __name__ == "__main__":
     arg2 = re.sub("_", " ", sys.argv[2])
 
 
-
     with open(arg1, 'r+') as src:
         body = src.read()
+
+    if(body.split('\n')[1] == "<!DOCTYPE html>"):
+        raise AlreadyWrappedException
+
+
     # trimmer(essayBody=src.read(), content=testing...)
     fullEssay = trimmer(body, arg2)
     content = fullEssay.getContent(arg1)
     # Raise nothing to repeat for the below line
     wrappedBody = fullEssay.wrap()
-    print("wrappedBody:\n ", wrappedBody)
     with open(arg1, 'r+') as src:
         body = src.write(wrappedBody)

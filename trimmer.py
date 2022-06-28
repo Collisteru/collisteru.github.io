@@ -91,5 +91,6 @@ class trimmer():
         with open(DIR, 'r+') as masterDir:
             dirText = masterDir.read()
             dirText = re.sub('<!--\{7\}-->', myDirEntry, dirText)
-            masterDir.truncate(0)
+            masterDir.seek(0)
+            masterDir.truncate()
             masterDir.write(dirText)
