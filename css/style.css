@@ -124,7 +124,6 @@ body{
   min-height: 297px;
   margin-top: -2px;
   
-  margin: 0 auto;
   padding-bottom: 20px;
 
 }
@@ -387,11 +386,6 @@ table {
   font-family: "Source Serif Regular";
 
   table-layout: fixed;
-  
-
-
-
-
 }
 
 table tr, table td {
