@@ -1,7 +1,7 @@
+<!DOCTYPE html>
 <!--Math Easily available -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<!DOCTYPE html>
 <html>
     <head>
         
@@ -22,7 +22,7 @@
 
         <p><em>Disclaimer:</em></p>
 <p>These notes were written mostly for my own use and might not make sense to everyone. They miss certain topics (like modeling) and go perhaps too deep into others depending on my interests and research. However, it is often helpful to learn a concept in more than one way. If my voice is the one that makes it click for you, then this is well worth it.</p>
-<h1 id="notes-on-math-4b-differential-equations-part-i">Notes on MATH 4B – Differential Equations – Part I</h1>
+<h1 id="notes-on-math-4b-differential-equations-part-i">Notes on Differential Equations – Part I</h1>
 <p>Differential equations describe relationships between functions and their derivatives. We solve them by finding the set of functions that make the relationship true. Differential equations are important to us, as engineers and applied mathematicians, because they appear over and over again in science but are difficult to solve. In fact, <a href="https://math.stackexchange.com/questions/https://math.stackexchange.com/questions/3782499/is-there-a-reason-it-is-so-rare-we-can-solve-differential-equations3782499/is-there-a-reason-it-is-so-rare-we-can-solve-differential-equations">the vast majority of differential equations are not solvable analytically</a>. This class covers the tricks we use for the ones that are.</p>
 <p>Notational note: for this class, t is the independent variable and we solve for y(t)</p>
 <h2 id="classifying-differential-equations">Classifying Differential Equations</h2>
@@ -133,9 +133,9 @@ $$(\mu M )_y = ( \mu N)_t$$
 rac{dy}{dx} = ay
 $$</span><br /></p>
 <p>These can usually be solved with separation of variables.</p>
-<h1 id="by-power-series">By Power Series</h1>
+<h2 id="by-power-series">By Power Series</h2>
 <p>Sometimes we can convert an equation into a power series. Differentiate the equation to get another power series, and you can sometimes combine that information to get an expression that reproduces the coefficients. Even luckier, you might be able to use one of the series convergence formulas to get a continuous solution.</p>
-<h1 id="the-fundamental-theorem-of-ordinary-differential-equations">The Fundamental Theorem of Ordinary Differential Equations</h1>
+<h2 id="the-fundamental-theorem-of-ordinary-differential-equations">The Fundamental Theorem of Ordinary Differential Equations</h2>
 <p>All of the equations we’ve looked at so far have been “nice,” in that they’ve been carefully designed to fall into one of the forms that we can solve relatively easily. However, the general differential equation will not be so nice– in fact, there are many that we don’t know how to solve with analytic (algebraic) methods.</p>
 <p>For all this difficulty, however, there is a ray of hope. <em>The Fundamental Theorem of Ordinary Differential Equations</em> tells us that a solution to an initial value problem always exists as a few (relatively weak) conditions are met.</p>
 <p>Consider the following ODE: 
@@ -153,7 +153,7 @@ $$
 </ol>
 <p>However, keep in mind that this theorem is only actually useable under certain, specific circumstances– as always, watch out for discontinuities.</p>
 <p>So far, we’ve only covered solutions to ODEs based on <em>analytical</em> methods, i.e. that are created by manipulating symbols. For many equations, this is impossible, and so we resor to numerical methods,. The upside of these is that they are valid for any differential equation. The downside is that they are mere approximations.</p>
-<h1 id="euler-method">Euler Method</h1>
+<h2 id="euler-method">Euler Method</h2>
 <p>Consider the following initial value problem:</p>
 <p>$$y’ = F(t, y)$$</p>
 <p>$$y(t0) = y0$$</p>
@@ -168,7 +168,7 @@ $$
 |\phi_h(T) - \phi(T)| < Kh
 $$
 <p>K is a constant that varies based on the function F and the length of the total interval between the initial value and the point of extrapolation.</p>
-<h1 id="picard-method">Picard Method</h1>
+<h2 id="picard-method">Picard Method</h2>
 <p>The Euler Method approximates a point along a curve by tip-toeing along the curve’s edge towards the target number. The Picard Method chooses to approximate functions instead: given an initial guess <br /><span class="math display">$$\y(t)$$</span><br /> for a solution in terms of y, the Picard Method can produce a better guess <em>ad infinitum</em> until we reach the desired accuracy.</p>
 <p>The general formula:</p>
 $$
