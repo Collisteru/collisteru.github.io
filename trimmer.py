@@ -4,7 +4,7 @@
 # This script takes HTML files for the essay bodies and inserts them into the wrapper for all writings, so I don't have to do it by hand.
 
 
-import re
+import regex as re
 import sys
 
 class AlreadyIndexedException(Exception):

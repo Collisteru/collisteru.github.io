@@ -3,7 +3,7 @@
 
 
 from trimmer import *
-import re
+import regex as re
 
 # TODO: Consider using argparse for this
 # Argument 0: The command name (./addToDir.py)
