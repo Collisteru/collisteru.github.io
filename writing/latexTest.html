@@ -1,0 +1,16 @@
+<h1 id="this-is-a-test-of-how-pandoc-handles-various-latex-input-formats">This is a test of how PanDoc handles various LaTeX input formats:</h1>
+<h2 id="inline-equations-with-and">Inline Equations with ( and ):</h2>
+<p>The Cartesian Plane is a two-dimensional chart of (y) against (x).</p>
+<p><em>FINAL REPORT: The letters look like normal text formatted in parantheses.</em></p>
+<h2 id="formatted-equations-with">Formatted Equations with $$:</h2>
+<!--
+$$
+\f\relax{x} = \int_{-\infty}^\infty
+    \f\hat\xi\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
+-->
+<p><em>FINAL REPORT: Everything after the percent symbol disappears.</em></p>
+<p>Code executed:</p>
+<p>pandoc -f markdown -t html TITLE.md -o TITLE.html</p>
+<p>Conclusion: Unfortunately, it looks like Pandoc tries to strip away the LaTeX-embedding symbols like ( and ) and replace them with tags. We will need to change the behavior of Pandoc in order to fix this.</p>
