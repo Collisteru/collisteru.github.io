@@ -19,26 +19,21 @@ class AlreadyWrappedException(Exception):
 
 # ./wrap.py testText.html testing... TEST TESTDSCRPT
 if __name__ == "__main__":
-#     print("sys.argv[0]: ", sys.argv[0]) # ./wrap.py
-#     print("sys.argv[1]: ", sys.argv[1]) # testText.html
-#     print("sys.argv[2]: ", sys.argv[2]) # testing...
-#     print("sys.argv[3]: ", sys.argv[3]) # TEST
-#     print("sys.argv[4]: ", sys.argv[4]) # TESTDSCRPT
-
-
-
+#    print("sys.argv[0]: ", sys.argv[0]) # ./wrap.py
+#    print("sys.argv[1]: ", sys.argv[1]) # testText.html
+#    print("sys.argv[2]: ", sys.argv[2]) # testing...
+#    print("sys.argv[3]: ", sys.argv[3]) # TEST
+#    print("sys.argv[4]: ", sys.argv[4]) # TESTDSCRPT
 
     # We use underscores to separate words in the command line. Replace them with spaces for HTML insertion
     arg1 = re.sub("_", " ", sys.argv[1])
     arg2 = re.sub("_", " ", sys.argv[2])
-
 
     with open(arg1, 'r+') as src:
         body = src.read()
 
     if(body.split('\n')[1] == "<!DOCTYPE html>"):
         raise AlreadyWrappedException
-
 
     # trimmer(essayBody=src.read(), content=testing...)
     fullEssay = trimmer(body, arg2)
