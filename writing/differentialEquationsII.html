@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<!--Math Easily available -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<html>
+    <head>
+        
+        <title>Collisteru</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Collisteru">
+        <meta name="author" content="Sean Carter">
+        <link rel="stylesheet" type="text/css" href="../css/style.css" title="style"> 
+    </head>
+    <body>
+        <div id="headbox">
+                <a href="https://collisteru.github.io/index.html" class="headerLink" > <div><b>Collisteru</b></div></a> 
+                <a href="https://collisteru.github.io/writing/writingDirectory.html" class="headerLink" > <div>Writing</div></a> 
+                <a href="https://collisteru.github.io/contact.html" class="headerLink" > <div>Contact</div></a> 
+            </div>
+        <div class="upperScroll"> </div>
+        <div id="mainbox">
+            <p>Note: These notes cover roughly the same topics as MATH 4B – Differential Equations at UCSB. However, they miss some topics and cover others that the lectures do not. They are no substitute for attending lectures!</p>
+            <h1 id="notes-on-differential-equations-part-ii">Notes on Differential Equations – Part II</h1>
+            <p><a href="./differentialEquations.html">Last time</a>, we only considered first-order differential equations which is characterized at most by a function and its first derivative. Now, we will consider differential equations with higher derivatives, including second order and above.</p>
+            <p>We’ll mostly cover tricks to solve DEs in the following form:</p>
+
+            $$
+            p_{1}y^{''}+p_{2}(t)y^{'}+p_{3}(t)y=g(t)
+            $$
+
+            <p>There are two categories of equations in this form: <em>homogeneous</em> ones where \(g(t) = 0\), and <em>nonhomogeneous</em> ones where \(g(t) 0 \). We’ll start with the homogeneous case, which is simpler.</p>
+            <h2 id="homogeneous-linear-differential-equations">Homogeneous Linear Differential Equations</h2>
+            <p>To abbreviate a long story, we derive from these equations a polynomial <em>characteristic equation</em>, and when we solve for the solutions of the characteristic polynomial, we’ll have a better idea of the form of the solutions to the original ODE. For example, when both functions \(p\) are constant, the DE above corresponds to the characteristic equation</p>
+            $$
+            r^2+p_1r+p_2 = g(t)
+            $$
+            <p>If the solutions to this polynomial are \(<em>{1}\) and \(</em>{2}\), then the solution to the original DE is:</p>
+            $$
+            y = C_{1}\phi_1(t) + C_2\phi_2(t)
+            $$
+            <p>When the two solutions are the same, it’s not enough to just combine these two terms– we still have to differentiate them somehow. In practice, we do this by multiplying one of the two terms by t, giving the following form:</p>
+            $$
+            y = (C_1+C_2t)e^{\lambda t}
+            $$
+            <p>(Apparently D’Alembert came up with this idea, and it’s a good example of the function of intuition in resoning about differnetial equations–). [RESEARCH THIS!!!]</p>
+            <p>When the two solutions are complex, <a href="https://en.wikipedia.org/wiki/Euler%27s_identity">Euler’s Identity</a> is used to express them purely in terms of functions on the reals. The typical solution lies in the following form:</p>
+            $$
+            y = C_1e^{\alpha t}cos(\beta t) + C_2e^{\alpha t}sin(\beta t)
+            $$
+            <p>Where \(\) is the real part of the complex solution and \(\) is the imaginary part.</p>
+            <p>Note also that all of the fundamentals here also apply to higher-order differential equations.</p>
+            <h2 id="nonhomogeneous-linear-differential-equations-the-method-of-undetermined-coefficients">Nonhomogeneous Linear Differential Equations: The Method of Undetermined Coefficients</h2>
+            <p>What happens when \(g(t)\) isn’t zero? Then we have a nonhomogeneous equation, and things get a little more interesting. Solutions to this type of equation will always appear in the form \(y_h + y_p\), where \(y_h\) is the “homogeneous” solution that we’ve already discussed, and \(y_p\) is a “particular” solution that we derive from \(g(t)\).</p>
+            <p>How do we find the particular solution? First, assume that \(g(t)\) appears in the following form:</p>
+            $$
+            g(t) = e^{\alpha t} (P(t)*cos(\beta t) + Q(t)sin(\beta t))
+            $$
+            <p>Where P, Q are polynomials.</p>
+            <p>The Method of Undetermined Coefficients has us finding the particular solution directly from \(g(t)\). The particular solution will ultimately appear in the following form:</p>
+            $$
+            y_p = t^{s}e^{\alpha t} ((A_0 + A_1 + ... + A_nt^n cos \beta t + (B_0 + B_1t + ... + B_nt^n) sin \beta t)))
+            $$
+            <p>Importantly, \(s\) relates to whether \(+ i \) in the right-hand side is a solution to the characteristic polynomial. If it isn’t, then \(s = 0\). If it is a solution, but only once (i.e. not a double root), then \(s = 1\). If it’s a double root, then \(s = 2\).</p>
+            <p>By the principle of superposition, if \(g(t)\) isn’t in the special form we covered above but is instead a sum of functions in that special form, we can derive \(y_p\) for each of those separate terms and add them for the final, correct solution.</p>
+            <p>At this point we have two groups of unknown coefficients to solve for: \(C_1, C_2, … C_n \), which comes from the general solution, and \(A, B, … \), which comes in with the particular solution.</p>
+            <p>For the first group of coefficients, plug in your intitial conditions and solve for the coefficient set through the resulting linear system.</p>
+            <p>Note that you’ll need at least as many initial conditions as you have coefficients.</p>
+            <h2 id="an-interlude-for-euler-cauchy-equations">An Interlude for Euler-Cauchy Equations</h2>
+            <p>Euler-Cauchy equations come in the form:</p>
+            $$
+            t^2y'' + \alpha t y' + \beta y = g(t), \; \; t > 0
+            $$
+            <p>We really shouldn’t be able to solve this, beecause the coefficients aren’t constant. However, there are still at least two solution methods– in fact, this is the only known form of DE with non-constant coefficients that we always know how to solve!</p>
+            <p>That being said, some trickery is required. Let \( y = x^m \).</p>
+            <p>Given this, we also have:</p>
+            $$
+            \frac{dy}{dx} = mx^{m-1} \\~\\
+            \frac{d^2y}{dx^2} = m(m-1)x^{m-2}
+            $$
+            <p>Substituting this into the original equation gives:</p>
+            $$
+            x^2 [r(r-1)x^{r-2}] + ax[rx^{r-1}] + by = 0 \\~\\
+            r(r-1)x^r + arx^r + bx^r = 0 \\~\\
+            r^2x^r - rx^r + arx^r + bx^r = 0 \\~\\
+            r^2 - r + ar _ b = 0 \\~\\
+            r^2 + (a-1)r + b = 0
+            $$
+            <p>This comes in the form that we can solve.</p>
+            <h2 id="the-wronskian">The Wronskian</h2>
+            <p>Here is where you’ll learn why linear algebra is a prerequisite for differential equations. You see, vectors aren’t just bags of numbers– we can also describe solutions to DEs as linear combinations of functions in a vector space.</p>
+            <p>In the general solutions we gave two sections ago, every term is multiplied by a different arbitrary constant \(C_n\). This means that a general solution is a sum of functions multiplied by constants A.K.A a linear combination.</p>
+            <p>One question we often want to answer is whether the functions in the linear combination are <strong>linearly independent</strong>, i.e. can any one of them be expressed as a linear combination of the others.</p>
+            <p>Using the rules we’ve defined so far and some elementary calculus, we can construct <strong>the Wronskian</strong>, a useful tool for understanding differential equations and the relationships between them.</p>
+            $$
+            W[f_1, f_2] = f_1f'_2 - f'_1 f_2
+            $$
+            </p>
+            <p>If the Wronskian is nonzero for all t, then we know that \( _1 \) and \( _2 \) are linearly independent.</p>
+            <p>Alternatively, according to <a href="https://en.wikipedia.org/wiki/Abel%27s_identity">Abel’s Identity</a>:</p>
+            $$
+            \text{Where} \: y'' + p_1(t)y' + p_2(t)y = 0 \\~\\
+            W = Ce^{-\Int p_1}
+            $$
+            <p>This also allows us to derive a second solution from the first. We can compute the Wronskian with Abel’s Identity and, knowing the first solution, plug them into the determinant equation for the Wronskian and produce a new differential equation that gives the other part of the general solution. This method is known as <strong>reduction of order</strong>.</p>
+            <p>However, the Wronskian can give us more…</p>
+            <h2 id="variation-of-parameters">Variation of Parameters</h2>
+            <p>What happens when \( g(t) \) isn’t in the correct form to use the Method of Undetermined Coefficients? As long as both functions of the general solution still exist, we can still compute the particular solution with the Wronskian, which relies on the Wronskian. The proper formula is:</p>
+            $$
+            y_p = \frac{-\phi_1}{a} \int \frac{\phi_2 g}{W[\phi_1, \phi_2]} + \frac{\phi_2}{a} \int \frac{\phi_1 g}{W[\phi_1, \phi_2]}
+            $$
+            <p>This works just as well with DEs with an order higher than two.</p>
+            <h2 id="differential-operators">Differential Operators</h2>
+            <p>An <strong>operator</strong> is a function on functions: it accepts one or more functions as input and returns one or more functions as an output. Differentiation is an operator; so is integration. There are many more operators than this and the differential operators involve differentiation in some way. This class briefly went over the Integral Operator, Convolution, and the Laplace Transform, but here I’ll focus entirely on the latter.</p>
+            <p>The <strong>Laplace Transform</strong> is an operator defined as:</p>
+            $$
+            \mathfrak{L}y(s) = \int_0^\infty e^{-st} y(t) dt
+            $$
+            <p>Along with Fourier Transforms, Laplace Transforms are the most important transforms in engineering. They’re used for analyzing linear time invariant systems, including the input / output response and stability and behavior in terms of bounded and unbounded output.</p>
+            <p>While we’re on the subject, let’s talk about another direct application of this sort of differential equation: damped oscillating systems.</p>
+            <h2 id="damping-in-harmonic-oscillators">Damping in Harmonic Oscillators</h2>
+            <p>Atoms are particles orbiting other particles, and all forms of light are oscillating waves. Therefore, both matter and light can be considered harmonic oscillators. Our world is made of them.</p>
+            <p>In a damped harmonic oscillator, friction is present that slows down the oscillation in proportion to the system’s current velocity. The faster the oscillator moves, the greater the damping is. Thereefore, the equation of motion becomes:</p>
+            $$
+            mx'' = -kx - \gamma x', \gamma \geq\ 0
+            $$
+            <p>\( \gamma \) must be nonzero in order for the equation to <strong>actually</strong> be damped, of course. This function exists in the standard form that we’ve already studied, so we can analyze it with the constant-polynomial methods we’ve already studied. In particular, three different scenarios arise in response to the value of \( \) in relation to a certain expression:</p>
+            $$
+            \text{Underdamped}: \gamma^2 - 4mk < 0
+            \text{Critically Damped}: \gamma^2 - 4mk = 0, \text{or} y < sqrt{4mk}.
+            \text{Overdamped}: \gamma^2 - 4mk > 0, \text{or} y < sqrt{4mk}.
+            $$
+
+            <p>###Underdamped</p>
+            <p>The solution is</p>
+            $$
+            x = Ae^{\frac{- \gamma}{2m}t} cos(\beta t - \phi)
+            $$
+            <p>Which exponentially decays even as it oscillates. This is the “damping” that most of us are used to observing in the oscillations of everyday life: the system moves back and forth, with each subsequent <em>back</em> being less than the <em>forth</em> that preceded it, before eventually decaying to nothing.</p>
+            <h3 id="overdamped">Overdamped</h3>
+            <p>Imagine you’re in a swimming pool, dragging behind you a spring with a ball attached to its end. You stop and watch the spring slowly push against the depths, settling into its equilibrium position. By the time the spring is fully relaxed, the ball has lost whatever velocity it has and doesn’t overshoot.</p>
+            <p>The water is so viscous that it <em>overdamps</em> the ball. In mathematics, this looks like:</p>
+            $$
+            y = C_1*e^{r_1 x}+C_2*e^{r_2 x}
+            $$
+            <p>Because the coefficient of \( y’ \) is negative in the original equation, both of these functions will be exponential decay. The system decays to its equilibrium point and stays there.</p>
+            <h3 id="critically-damped">Critically Damped</h3>
+            <p>Critically damped systems occur when the damping is <em>just enough</em> to make sure that the system does not overshoot the equilibrium point, but not any more. This is desirable because a critically damped system moves more quickly towards equilibrium than one that is overdamped. In this case, the solution is:</p>
+            $$
+            x = e^{-\omega_0t}(x_0 + (v_0 + \omega_0x_0)t)
+            $$
+            <p>which is an exponential decay function multiplied by a linear function.</p>
+            <h2 id="a-few-points-on-higher-order-differential-equations">A Few Points on Higher-Order Differential Equations</h2>
+            <p>We may define the Wronskian for a differential equation with an arbitray order and an arbitrary number of solutions \( y_1 y_n \):</p>
+            $$
+            W(y_1, y_2, ..., y_n) = \begin{vmatrix}
+             y_1 & y_2 & \ldots & y_n \\
+             y'_1 & y'_2 &  & \vdots \\
+             \vdots &  & \ddots & \vdots \\
+             y^{(n)}_1& \ldots & \ldots &  y_n^{(n)}
+            \end{vmatrix}
+            $$
+            <p>Abel’s Identity also makes a return appearance to provide a nice identity for this case:</p>
+            $$
+            W = Ce^{- \int p_1}
+            $$
+            <p>Finally, we can also perform variation of parameters for equations of arbitrary order, but the way to do it is a bit weird. Define a new determinant of the following matrix:</p>
+            $$
+            W_k = 
+            \begin{vmatrix}
+            \phi_1 & \ldots & 0 & \ldots & \phi_n \\ 
+             \vdots &  & \vdots &  & \vdots \\ 
+             \phi_1^{(n-2)} & \ldots  & 0 & \ldots  & \phi_n^{(n-2)} \\ 
+             \phi_1^{(n-1)} & \ldots & 1 & \ldots & \phi_n^{(n-1)}
+            \end{vmatrix}
+            $$
+            <p>(This is just the Wronskian with the \( k_{th} \) column replaced with a one-hot vector)</p>
+            <p>Then the particular solution of your DE is:</p>
+            $$
+            y_p = \sum_{k=1}^{n} \phi_k \int \frac{gW_k}{W[\phi_1, \ldots, \phi_n]}
+            $$
+            <h2 id="systems-of-linear-odes">Systems of Linear ODEs</h2>
+            <p>Systems are useful for describing situations where there are multiple continuously-varying quantities in interplay. Classic situations include predator-prey relationships and price relations in economics. There’s actually nothing fundamentally different about the way we solve these; we mostly just apply what we’ve learned already to vector equations. If this doesn’t speak to the power of linear algebra in analysis, I don’t know what does.</p>
+            <p>We write a system as:</p>
+            $$
+            \textbf{x} = \textbf{F}(t, \textbf{x}), \textbf{x} = (x_1, \ldots, x_n)
+            $$
+            <p>\(  \) is an nxn matrix, and \(  \) are column vectors.</p>
+            <p>Just like in the single-equation case, the solution to a homogeneous system (the right-hand side is zero) is a linear combination of continuous functions. However, in the systems case we have a vector of functions.</p>
+            <p>Plug the coefficients of the system into a matrix, then find the eigenvalues and eigenvectors of this matrix in the standard way. When these eigenvalues are distinct, the general solution is</p>
+            $$
+            C_1 e^{\alpha t} [ (cos(\beta t)\stackrel{\rightarrow}{p_1}) - sin(\beta t)  \stackrel{\rightarrow}{q_1} ] \\
+            \:  \: \; + \: C_2 e^{\alpha t} [ (cos(\beta t)\stackrel{\rightarrow}{p_2}) - sin(\beta t) \stackrel{\rightarrow}{q_2}]
+            $$
+            <h3 id="variations-of-parameters-with-systems">Variations of Parameters with Systems</h3>
+            <p>Alright, but what if you have a nonhomogeneous system? The basic idea is the same, but the procedure is behind variation of parameters in this case is a little more involved.</p>
+            <p>We define the <strong>fundamental matrix</strong> of an IVP as:</p>
+            $$
+            \Psi (t) = (\textbf{x}_1 (t) \ldots \textbf{x}_n(t))
+            $$
+            <p>Your particular solution is:</p>
+            $$
+            \textbf{x}_p = \Psi \int \Psi^{-1} \textbf{g}
+            $$
+            <p>The above expression is simple to write and hellacious to compute. Make sure you remember the formula for the matrix inverse.</p>
+            <h2 id="phase-planes-and-phase-portraits">Phase Planes and Phase Portraits</h2>
+            <p>Remember how we mapped two-dimensional differential equations and the vector flows around them in part one? Well, here we do that with systems in arbitrary dimensions. Phase portraits record the trajectories of solutions of systems of differential equations across the planes of coordinates, with more coordinates corresponding to more equations.</p>
+            <p>When asked to sketch a phase portrait for a system, here’s what you should do:</p>
+            <ul>
+            <li>Find the eigenvalues of the system</li>
+            <li>Find the eigenvectors that correspond to the eigenvalues. If the eigenvalues are real, then the eigenvectors will slash across the phase portrait, with each solution following them.</li>
+            </ul>
+            <p>We can also classify an equilibrium solution into a number of different bins:</p>
+            <ul>
+            <li><strong>Asymptotically stable</strong> solutions are ones which have a boundary such that all solutions that enter or start in that boundary eventually move to the origin. They include nodal sinks, star sinks, and spiral sinks.</li>
+            <li><strong>Stable but not asymptotically stable</strong> solutions are slightly weaker: they have a region such that no solution that enters or starts in that region ever escapes. Centers fall into this category.</li>
+            <li><strong>Unstable</strong> solutions have neither of these properties. They include nodal sources, improper nodal sources, star sources, spiral sources, and saddles.</li>
+            </ul>
+            <p>Fun Fact: Hilbert’s 16th problem asks for the upper bound of the number of limit cycles of a polynomial system</p>
+            $$
+            x' = P_n(x, y) \\~\\
+            y' = Q_n(x, y)
+            $$
+            <p>This problem is still open for all n greater than 1!</p>
+            <h2 id="boundary-value-problems">Boundary Value Problems</h2>
+            <p>To wrap things up, we’ll consider a type of differential equation with different boundary conditions:</p>
+            $$
+            y'' + \lambda y = 0 \\~\\
+            y(0) = y(\pi) = 0
+            $$
+            <p>We still have two different initial conditions, but instead of \( y(0) = A, y’(0) = B \), we have two conditions that are both of \( y \).</p>
+            <p>Furthermore, it turns out that these boundaries are actually very strict! The solution is \( y = 0 \) unless \( \) is a perfect square, in which case the solution is equal to \( C sin nt \).</p>
+            <p>Let’s consider another case:</p>
+            $$
+            y'' + \lambda y = 0,  \\~\\
+            y(0) = y(\pi) + y'(\pi) = 0
+            <p>Differential equations are indispensible for the engineer, scientist, or mathematician. However, a single blogpost can only scratch the surface of the surface of the field. <a href="https://mathoverflow.net/questions/28721/good-differential-equations-text-for-undergraduates-who-want-to-become-pure-math">Now, go forth and study!</a></p>
+            <p>Special thanks to Vikram Bhagavatula for help with editing, fact-checking, and applications.</p>
+        </div>
+        <div class="bottomScroll"> </div>
+        <div class="earthWrapper">
+            <img src="../art/earthInSpaceTwiceCropped.png">
+        </div>
+        
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
