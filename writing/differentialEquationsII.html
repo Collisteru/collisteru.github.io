@@ -137,17 +137,14 @@
             $$
 
             $$
-            \text{Critically Damped}: \gamma^2 - 4mk = 0, \text{or} y < sqrt{4mk}. //~//
+            \text{Critically Damped}: \gamma^2 - 4mk = 0, \text{or} y < sqrt{4mk}.
             $$
 
             $$
-            \text{Overdamped}: \gamma^2 - 4mk > 0, \text{or} y < sqrt{4mk}. //~//
-            $$
-                
+            \text{Overdamped}: \gamma^2 - 4mk > 0, \text{or} y < \sqrt{4mk}.
             $$
             <h3 id="underdamped">Underdamped</h3>
             <p>The solution is</p>
-            $$
 
             $$
             x = Ae^{\frac{- \gamma}{2m}t} cos(\beta t - \phi)
@@ -159,7 +156,7 @@
             $$
             y = C_1*e^{r_1 x}+C_2*e^{r_2 x}
             $$
-            <p>Because the coefficient of \( y’ \) is negative in the original equation, both of these functions will be exponential decay. The system decays to its equilibrium point and stays there.</p>
+            <p>Because the coefficient of \( y’ \) is negative in the original equation, both of these functions represent exponential decay. The system decays to its equilibrium point and stays there.</p>
             <h3 id="critically-damped">Critically Damped</h3>
             <p>Critically damped systems occur when the damping is <em>just enough</em> to make sure that the system does not overshoot the equilibrium point, but not any more. This is desirable because a critically damped system moves more quickly towards equilibrium than one that is overdamped. In this case, the solution is:</p>
             $$
@@ -167,7 +164,7 @@
             $$
             <p>which is an exponential decay function multiplied by a linear function.</p>
             <h2 id="a-few-points-on-higher-order-differential-equations">A Few Points on Higher-Order Differential Equations</h2>
-            <p>We may define the Wronskian for a differential equation with an arbitray order and an arbitrary number of solutions \( y_1 y_n \):</p>
+            <p>We may define the Wronskian for a differential equation with an arbitray order and an arbitrary number of solutions \( y_1 \ldots y_n \):</p>
             $$
             W(y_1, y_2, ..., y_n) = \begin{vmatrix}
              y_1 & y_2 & \ldots & y_n \\
@@ -199,11 +196,14 @@
             <p>Systems are useful for describing situations where there are multiple continuously-varying quantities in interplay. Classic situations include predator-prey relationships and price relations in economics. There’s actually nothing fundamentally different about the way we solve these; we mostly just apply what we’ve learned already to vector equations. If this doesn’t speak to the power of linear algebra in analysis, I don’t know what does.</p>
             <p>We write a system as:</p>
             $$
-            \textbf{x} = \textbf{F}(t, \textbf{x}), \textbf{x} = (x_1, \ldots, x_n)
+            \textbf{x} = \textbf{F}(t) \textbf{x}
             $$
-            <p>\(  \) is an nxn matrix, and \(  \) are column vectors.</p>
+            $$
+            \textbf{x} = (x_1, \ldots, x_n)
+            $$
+            <p>\( \textbf{F}  \) is an nxn matrix, and \( \textbf{X} \) is a column vector of equations.</p>
             <p>Just like in the single-equation case, the solution to a homogeneous system (the right-hand side is zero) is a linear combination of continuous functions. However, in the systems case we have a vector of functions.</p>
-            <p>Plug the coefficients of the system into a matrix, then find the eigenvalues and eigenvectors of this matrix in the standard way. When these eigenvalues are distinct, the general solution is</p>
+            <p>Plug the coefficients of the system into a matrix, then find the eigenvalues and eigenvectors of this matrix. When these eigenvalues are distinct, the general solution is</p>
             $$
             C_1 e^{\alpha t} [ (cos(\beta t)\stackrel{\rightarrow}{p_1}) - sin(\beta t)  \stackrel{\rightarrow}{q_1} ] \\
             \:  \: \; + \: C_2 e^{\alpha t} [ (cos(\beta t)\stackrel{\rightarrow}{p_2}) - sin(\beta t) \stackrel{\rightarrow}{q_2}]
@@ -245,7 +245,7 @@
             y(0) = y(\pi) = 0
             $$
             <p>We still have two different initial conditions, but instead of \( y(0) = A, y’(0) = B \), we have two conditions that are both of \( y \).</p>
-            <p>Furthermore, it turns out that these boundaries are actually very strict! The solution is \( y = 0 \) unless \( \) is a perfect square, in which case the solution is equal to \( C sin nt \).</p>
+            <p>Furthermore, it turns out that these boundaries are actually very strict! The solution is \( y = 0 \) unless \( \lambda \) is a perfect square, in which case the solution is equal to \( C \sin{nt} \).</p>
             <p>Differential equations are indispensible for the engineer, scientist, or mathematician. However, a single blogpost can only scratch the surface of the surface of the field. <a href="https://mathoverflow.net/questions/28721/good-differential-equations-text-for-undergraduates-who-want-to-become-pure-math">Now, go forth and study!</a></p>
             <p>Special thanks to Vikram Bhagavatula for help with editing, fact-checking, and applications.</p>
         </div>
@@ -253,8 +253,6 @@
         <div class="earthWrapper">
             <img src="../art/earthInSpaceTwiceCropped.png">
         </div>
-        
-
     </body>
 </html>
 
