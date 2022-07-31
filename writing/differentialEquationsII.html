@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--Math Easily available -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -29,13 +28,13 @@
             p_{1}y^{''}+p_{2}(t)y^{'}+p_{3}(t)y=g(t)
             $$
 
-            <p>There are two categories of equations in this form: <em>homogeneous</em> ones where \(g(t) = 0\), and <em>nonhomogeneous</em> ones where \(g(t) 0 \). We’ll start with the homogeneous case, which is simpler.</p>
+            <p>There are two categories of equations in this form: <em>homogeneous</em> ones where \(g(t) = 0\), and <em>nonhomogeneous</em> ones where \(g(t) \neq 0 \). We’ll start with the homogeneous case, which is simpler.</p>
             <h2 id="homogeneous-linear-differential-equations">Homogeneous Linear Differential Equations</h2>
             <p>To abbreviate a long story, we derive from these equations a polynomial <em>characteristic equation</em>, and when we solve for the solutions of the characteristic polynomial, we’ll have a better idea of the form of the solutions to the original ODE. For example, when both functions \(p\) are constant, the DE above corresponds to the characteristic equation</p>
             $$
             r^2+p_1r+p_2 = g(t)
             $$
-            <p>If the solutions to this polynomial are \(<em>{1}\) and \(</em>{2}\), then the solution to the original DE is:</p>
+            <p>If the solutions to this polynomial are \( \phi_1 \) and \( \phi_2 \) , then the solution to the original DE is:</p>
             $$
             y = C_{1}\phi_1(t) + C_2\phi_2(t)
             $$
@@ -43,7 +42,7 @@
             $$
             y = (C_1+C_2t)e^{\lambda t}
             $$
-            <p>(Apparently D’Alembert came up with this idea, and it’s a good example of the function of intuition in resoning about differnetial equations–). [RESEARCH THIS!!!]</p>
+            <p>(Apparently D’Alembert came up with this idea, and it’s a good example of the function of intuition in resoning about differnetial equations).</p>
             <p>When the two solutions are complex, <a href="https://en.wikipedia.org/wiki/Euler%27s_identity">Euler’s Identity</a> is used to express them purely in terms of functions on the reals. The typical solution lies in the following form:</p>
             $$
             y = C_1e^{\alpha t}cos(\beta t) + C_2e^{\alpha t}sin(\beta t)
@@ -100,7 +99,7 @@
             <p>Alternatively, according to <a href="https://en.wikipedia.org/wiki/Abel%27s_identity">Abel’s Identity</a>:</p>
             $$
             \text{Where} \: y'' + p_1(t)y' + p_2(t)y = 0 \\~\\
-            W = Ce^{-\Int p_1}
+            W = Ce^{-\int p_1}
             $$
             <p>This also allows us to derive a second solution from the first. We can compute the Wronskian with Abel’s Identity and, knowing the first solution, plug them into the determinant equation for the Wronskian and produce a new differential equation that gives the other part of the general solution. This method is known as <strong>reduction of order</strong>.</p>
             <p>However, the Wronskian can give us more…</p>
@@ -126,12 +125,12 @@
             $$
             <p>\( \gamma \) must be nonzero in order for the equation to <strong>actually</strong> be damped, of course. This function exists in the standard form that we’ve already studied, so we can analyze it with the constant-polynomial methods we’ve already studied. In particular, three different scenarios arise in response to the value of \( \) in relation to a certain expression:</p>
             $$
-            \text{Underdamped}: \gamma^2 - 4mk < 0
-            \text{Critically Damped}: \gamma^2 - 4mk = 0, \text{or} y < sqrt{4mk}.
-            \text{Overdamped}: \gamma^2 - 4mk > 0, \text{or} y < sqrt{4mk}.
+            \text{Underdamped}: \gamma^2 - 4mk < 0 //~//
+            \text{Critically Damped}: \gamma^2 - 4mk = 0, \text{or} y < sqrt{4mk}. //~//
+            \text{Overdamped}: \gamma^2 - 4mk > 0, \text{or} y < sqrt{4mk}. //~//
             $$
 
-            <p>###Underdamped</p>
+            <h3 id="underdamped">Underdamped</h3>
             <p>The solution is</p>
             $$
             x = Ae^{\frac{- \gamma}{2m}t} cos(\beta t - \phi)
@@ -234,6 +233,7 @@
             $$
             y'' + \lambda y = 0,  \\~\\
             y(0) = y(\pi) + y'(\pi) = 0
+            $$
             <p>Differential equations are indispensible for the engineer, scientist, or mathematician. However, a single blogpost can only scratch the surface of the surface of the field. <a href="https://mathoverflow.net/questions/28721/good-differential-equations-text-for-undergraduates-who-want-to-become-pure-math">Now, go forth and study!</a></p>
             <p>Special thanks to Vikram Bhagavatula for help with editing, fact-checking, and applications.</p>
         </div>
