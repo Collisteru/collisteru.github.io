@@ -39,7 +39,7 @@ WRAPPER = '''
         <div class="upperScroll"> </div>
         <div id="mainbox">
 
-        {1}
+        <1>
 
         </div>
         <div class="bottomScroll"> </div>
@@ -86,7 +86,7 @@ class trimmer():
         # re.sub: To see, to replace, withinThis
         testSub = re.sub('(e)', 'i', 'hello')
         essay = re.sub('\{0\}', self.content, essay)
-        # print("self.essayBody = ", self.essayBody)
+        print("self.essayBody = ", self.essayBody)
         essay = re.sub('\{1\}', self.essayBody, essay)
         return essay
 
