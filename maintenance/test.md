@@ -45,6 +45,9 @@ Imagination is more important than knowledge.
 
 
 se are equivocally so named, for, though they have Things are said to be named 'equivocally' when, though they have a common name, the definition corresponding with the name differs for each. Thus, a real man and a figure in a picture can both lay claim to the name 'animal'; yet these are equivocally so named, for, though they have Things are said to be named 'equivocally' when, though they have a common name, the definition corresponding with the name differs for each. Thus, a real man and a figure in a picture can both lay claim to the name 'animal'; yet these are equivocally so named, for, though they have This is also a think that must be named: a link! This link, on the other hand, is
+Here is some inline math: \\( 2 + 2 = 2 + 2 = \begin{bmatrix}\alpha & \beta & \gamma \\ \delta & \epsilon  & \zeta \end{bmatrix} \\)
+
+
 
 
 
