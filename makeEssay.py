@@ -9,7 +9,7 @@ import sys
 
 DIR = "./writing/writingDirectory.html"
 
-# Taken from maintenance/template.html
+# Taken from maintenance/collistemplate.html
 WRAPPER = '''
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,8 @@ WRAPPER = '''
         <meta charset="UTF-8">
         <meta name="description" content=" {0} ">
         <meta name="author" content="Sean Carter">
-        <link rel="stylesheet" type="text/css" href="../css/style.css" title="style"> 
+        <l
+        ink rel="stylesheet" type="text/css" href="../css/style.css" title="style"> 
     </head>
     <body>
         <div id="headbox">

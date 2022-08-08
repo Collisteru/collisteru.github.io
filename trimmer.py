@@ -15,7 +15,7 @@ class AlreadyIndexedException(Exception):
 
 DIR = "./writing/writingDirectory.html"
 
-# Taken from maintenance/template.html
+# Taken from maintenance/collistemplate.html
 WRAPPER = '''
 <!--Math Easily available -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
