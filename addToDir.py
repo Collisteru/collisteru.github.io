@@ -2,7 +2,8 @@
 # addToDir.py
 
 
-from trimmer import *
+import addToDir
+import sys
 import regex as re
 
 # TODO: Consider using argparse for this
@@ -22,7 +23,7 @@ if __name__ == "__main__":
     # Add to directory
     with open(sys.argv[1], 'r+') as src:
         body = src.read()
-    fullEssay = trimmer(body, sys.argv[2])
+    fullEssay = body
     fullEssay.addToDir(sys.argv[1], sys.argv[3], sys.argv[4])
 
 
