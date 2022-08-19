@@ -1,0 +1,251 @@
+
+<!--Math Easily available -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Collisteru</title>
+        <meta charset="UTF-8">
+        <meta name="description" content=" Differential Equations ">
+        <meta name="author" content="Sean Carter">
+        <link rel="stylesheet" type="text/css" href="../css/style.css" title="style"> 
+    </head>
+    <body>
+        <div id="headbox">
+                <a href="https://collisteru.github.io/index.html" class="headerLink" > <div><b>Collisteru</b></div></a> 
+                <a href="https://collisteru.github.io/writing/writingDirectory.html" class="headerLink" > <div>Writing</div></a> 
+                <a href="https://collisteru.github.io/contact.html" class="headerLink" > <div>Contact</div></a> 
+            </div>
+        <div class="upperScroll"> </div>
+        <div id="mainbox">
+
+        <script>
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript">
+</script>
+<p><em>Disclaimer:</em></p>
+<p>These notes were written mostly for my own use and might not make sense to everyone. They miss certain topics (like modeling) and go perhaps too deep into others depending on my interests and research. However, it is often helpful to learn a concept in more than one way. If my voice is the one that makes it click for you, then this is well worth it.</p>
+<h1 id="notes-on-differential-equations-part-i">Notes on Differential Equations – Part I</h1>
+<p>Differential equations describe relationships between functions and their derivatives. We solve them by finding the set of functions that make the relationship true. Differential equations are important to us, as engineers and applied mathematicians, because they appear over and over again in science but are difficult to solve. In fact, <a href="https://math.stackexchange.com/questions/https://math.stackexchange.com/questions/3782499/is-there-a-reason-it-is-so-rare-we-can-solve-differential-equations3782499/is-there-a-reason-it-is-so-rare-we-can-solve-differential-equations">the vast majority of differential equations are not solvable analytically</a>. This class covers the tricks we use for the ones that are.</p>
+<p>Notational note: for this class, \(t\) is the independent variable and we solve for \(y(t)\)</p>
+<h2 id="classifying-differential-equations">Classifying Differential Equations</h2>
+<p>Classifying differential equations helps us quickly recognize patterns in the solvable ones.</p>
+<p>We classify differential equations on three axes: <strong>Order</strong>, <strong>Linear vs. Nonlinear</strong>, and <strong>Ordinary vs. Partial</strong></p>
+<p>The <strong>order</strong> of a differential equation is the largest derivative present in the equation. A differential equation is <strong>linear</strong> iff it can be expressed in the following form:</p>
+ 
+$$
+\begin{bmatrix}
+a_1 & a_2 & a_3 & a_4 & ... & a_{(n)}
+\end{bmatrix}
+\cdot
+\begin{bmatrix} 1 \\ y \\ y' \\ y'' \\ y^{(n)} \end{bmatrix} = g(t)
+$$
+ 
+<p>In other words, the function y and its derivatives are (1) never raised to any power other than the first and (2) don’t appear “inside” other functions like \((y)\)</p>
+<p>A differential equation is partial if it contains partial derivatives; it is ordinary if it contains ordinary (univariate) derivatives. This class focuses on ordinary differential equations, or ODEs.</p>
+<p>Note that there are also systems of differential equations in which we consider more than one at a time. They can typically be rewritten as differential equations involving vectors.</p>
+<h2 id="examples-of-differential-equations">Examples of Differential Equations</h2>
+<ul>
+<li>Newton’s Second Law, expressed as</li>
+</ul>
+ 
+$$
+F(x, y) = m \cdot x''
+$$
+ 
+<ul>
+<li>Verhulst’s famous equation for logistic growth of individual species</li>
+<li>Fourier’s Heat Equation</li>
+</ul>
+<h2 id="solving-differential-equations">Solving Differential Equations</h2>
+<p>One of the most interesting features of differential equations is that they usually have <em>an infinite number of solutions</em>. Each one corresponds to a different value for the constant of integration, which you’ll remember from Calculus I and which we introduce when solving ODEs.</p>
+<p>When your teacher asks for the <strong>general solution</strong> of an ODE, they want the formula (or set thereof) that describes all the solutions. These formulas leave the constant of integration unspecified. When you assign it a value, you transform the general solution into a <strong>real solution</strong>.</p>
+<p>Watch out, however: discontinuities can introduce the need for more than one equation in the general solution. You need them all to be correct.</p>
+<p>A linear algebraist would say that solutions to ODEs form a subspace of the set of continuously differential functions. For general solutions with only one constant, that subspace has only one dimension.</p>
+<p><strong>Direction Fields</strong> illustrate this principle beautifully. They chart how \(y^{}\) varies along the \(t\) and \(y\) axes. The ODE’s solutions follow the slopes like gulls over gulf steams.</p>
+
+<img src="https://tutorial.math.lamar.edu/classes/de/DirectionFields_Files/image015.png" alt="Directional Fields">
+
+<p>It is also no accident that direction fields resemble vector fields. Differential equations illustrate a specific path in the general fluid flow that vector fields express. This is one of the features that makes them indispensible to science.</p>
+<h2 id="solving-linear-odes">Solving Linear ODEs</h2>
+<h3 id="homogeneous-linear-odes">Homogeneous Linear ODEs</h3>
+<p>The right-hand side is zero and the left-hand side is a linear combination of the function and its derivatives. One example looks like the following:</p>
+ 
+$$
+y' - y  = 0
+$$
+ 
+<p>Just add \(y\) to both sides and integrate. You can do this if you have an arbitrary-order derivative of \(y\) on one side and a \(g\) on the other.</p>
+<h3 id="nonhomogeneous-linear-odes">Nonhomogeneous Linear ODEs</h3>
+<p>You can also solve a nonhomogeneous first-order linear ODE in the following form:</p>
+ 
+$$y' + p(t) y = g(t)$$
+ 
+<p>… by multiplying all terms by an integrating factor.</p>
+<p>This integrating factor is \(  e^{\int p(t)}   \)</p>
+<p>And the solution is:</p>
+ 
+$$y = \frac{1}{\mu} (\int \mu g + C) $$
+ 
+<p>(Usually the hardest part of this type of problem is integrating \(g(t)\), which may require integration by parts, a complicated U-substitution, or both.</p>
+<p>Once you’ve solved for an ODE’s general solution, an initial value problem will give you an expression of the form \(y(a) = b\) and ask you to solve for C as well.</p>
+<ul>
+<li>WATCH OUT: Solutions containing t raised to negative or fractional powers are often domain-limited. Check for singularities or individual constant solutions like t = 0.</li>
+</ul>
+<h2 id="separation-of-variables">Separation of Variables</h2>
+<p>You can do this if your equation can be expressed as:</p>
+ 
+$$ y' = T(t)Y(y)$$
+ 
+<p>In this case, you can manipulate it into this form:</p>
+ 
+$$ 
+dy/dt = T(t) \cdot Y(y) 
+$$
+$$
+Y^{-1}(y) dy = T(t) dt
+$$
+ 
+<p>My warning from earlier applies here with special force. The manipulation above often results in domain-limited curves. After you solve for the general solution, always check the domain. You may need to solve for y’s domain, then backsolve for the restrictions on x.</p>
+<h2 id="exact-equations">Exact Equations</h2>
+<p>An <em>exact equation</em> appers in standard form like this:</p>
+ 
+$$
+M(t, y) dt + N(t, y) dy = 0
+$$
+ 
+<p>Where there exists a function \(\psi \) such that:</p>
+ 
+$$
+M = \frac{\partial \psi}{\partial t} , N = \frac{\partial \psi}{\partial y}
+$$
+ 
+<p>We call \( \psi \) the <strong>scalar potential</strong>, and a theorem by Poincaré guarantees its existence so long as \( M_y = N_t \).</p>
+<p>If you know that \( M_y = N_t \), one way to find the scalar potential is just to look at M and N and find by inspection a function \( \psi\) such that \( \psi_x = M \) and \( \psi_y = N \)</p>
+<p>Another method is a line integral, where the line is an L-shape that goes only horizontally at first from \( (0, 0) \) to \( (x, 0) \) and then all vertically from \( (x, 0) \) to \( (x, y) \).</p>
+<p>For the first part of that two-part line integral, note also that y is always zero, so any term with y is zero.</p>
+<h3 id="making-exact-equations-with-integrating-factors">Making Exact Equations with Integrating Factors</h3>
+<p>We can sometimes turn a non-exact equation into one that is exact with an integrating factor. We locate a positive function \( (t, y) \) such that</p>
+ 
+$$(\mu M )_y = ( \mu N)_t$$
+ 
+<p>This equation is <em>usually</em> harder to solve than the original ODE. There are two cases when it isn’t: when \(\mu\) is a function solely of \( t \) and when it is a function solely of \( y \). In both cases, relatively easy differential equations that solve for \( \mu \) can be found by solving the above equation. Keep in mind that, when \( \mu\) is a function solely of \(x\), \(\mu_y = 0\). The opposite applies when \( \mu \) is a function solely of \( y \).</p>
+<p>If neither of these work, \(\mu\) must be a function of both \(x\) and \(y\). Consider \( \mu(x, y) = x^m y^n ?\)</p>
+<h2 id="change-of-variables">Change of Variables</h2>
+<p>In some cases, a change of variables can convert one type of ODE into another type that we can solve.</p>
+<h3 id="rationically-homogeneous-equations-rhes">Rationically Homogeneous Equations (RHEs)</h3>
+<p>I call them “rationically homogeneous” even though they’re actually just called “homogeneous” to distinguish them from the homogeneous equations discussed earlier.</p>
+<p>RHEs come in the form \( y^{} = F(t, y) \), where F depends only on the ratio \(y / t\).</p>
+<p>We solve this with the change of variables \(v = \frac{y}{t} \)</p>
+<h3 id="bernoulli-differential-equations">Bernoulli Differential Equations</h3>
+<p>This is our first encounter with differential equations in which \( y \) is raised to a power other than one. <strong>Bernoulli Equations</strong> come in the form:</p>
+ 
+$$y^{\prime} + p(x)y = q(x)y^n $$
+ 
+<p>The crucial step to solving these is dividing the whole equation by \(y^n\), leaving</p>
+ 
+$$y^{-n} y^{\prime} + p(x)y^{1-n} = q(x) $$
+ 
+<p>This isolates the RHS, allowing us to transform the equation into a classic linear first-order ODE with the following substitution:</p>
+ 
+$$v = y^{1-n} $$
+ 
+<p>which turns the above into</p>
+ 
+$$\frac{v^{\prime}}{(1-n)} + vp(x) = q(x) $$ 
+ 
+<p>and solve.</p>
+<h3 id="riccati-equations">Riccati Equations</h3>
+<p>The equation</p>
+ 
+$$
+y' = a_0(t) + a_1(t)y + a_2(t)y^2
+$$
+ 
+<p>is a <strong>Riccati equation</strong> if \(a_0, a_1, a_2 \) are continuous and \(a_2\) is not zero (if it is, the equation is just linear, and we can solve it using methods we already know.)</p>
+<p>We can solve Riccati equations by knowing a <em>particular</em> solution \(y_p\). Rewrite the equation using t and v, where</p>
+ 
+$$
+v = y - y_p
+$$
+ 
+<p>Then, solve this for y and replace v back to return to the original solution.</p>
+<h3 id="riccati-equations">Autonomous Differential Equations</h3>
+<p>Some differential equations don’t depend directly on t but instead only on y.These are known as <strong>autonomous</strong> and often crop up in nature.</p>
+<p>Consider a poulation of jackrabbits in a field of boundless plenty. The only restriction on their growth is the number of rabbits available to breed and have children. The more rabbits there are, the more rabbit couplings can occur per gestational period and the more quickly the population grows. We model this with the equation below:</p>
+ 
+$$
+\frac{dy}{dx} = ay
+$$
+ 
+<p>These can usually be solved with separation of variables.</p>
+<h3 id="by-power-series">By Power Series</h3>
+<p>Sometimes we can convert an equation into a power series. Differentiate the equation to get another power series, and you can sometimes combine that information to get an expression that reproduces the coefficients. Even luckier, you might be able to use one of the series convergence formulas to get a continuous solution.</p>
+<h3 id="the-fundamental-theorem-of-ordinary-differential-equations">The Fundamental Theorem of Ordinary Differential Equations</h3>
+<p>All of the equations we’ve looked at so far have been “nice,” in that they’ve been carefully designed to fall into one of the forms that we can solve relatively easily. However, the general differential equation will not be so nice– in fact, there are many that we don’t know how to solve with analytic (algebraic) methods.</p>
+<p>For all this difficulty, however, there is a ray of hope. <em>The Fundamental Theorem of Ordinary Differential Equations</em> tells us that a solution to an initial value problem always exists as a few (relatively weak) conditions are met.</p>
+<p>Consider the following ODE:  
+$$
+y' = F(t, y), y(t0) = y0
+$$
+ </p>
+<p>When F is a continuous function on some domain \(\) in the Cartesian plane, there exists a certain range in that plane around the starting point where a function exists that solves that ODE. Moreover, if \(F_y\) is continuous, then that solution will be unique.</p>
+<p>This theorem is important for a number of reasons:</p>
+<ol type="1">
+<li>It guarantees that for “nice” functions, a solution to the ODE will always exist, even if we might not be able to solve for it.</li>
+<li>It guarantees that that solution will be unique if \(F_y\) is continuous, which is often more important than knowing what that solution is.</li>
+<li>It tells us that we can determine the maximal domain of the function solution without actually solving for the function– because that domain is precisely the minimum domain among \(F()\) and \(y()\).</li>
+<li>From this theorem we can derive information about how the solutions to an ODE <em>vary</em> as the initial conditions vary. They do so smoothly, like a piece of hair being drawn out on a curler… and futhermore, solutions to the same ODE at different initial conditions (also known as integral lines) can be transformed (rectified) by an invertible function to become parallel lines.</li>
+</ol>
+<p>However, keep in mind that this theorem is only actually useable under certain, specific circumstances– as always, watch out for discontinuities.</p>
+<p>So far, we’ve only covered solutions to ODEs based on <em>analytical</em> methods, i.e. that are created by manipulating symbols. For many equations, this is impossible, and so we resort to numerical methods,. The upside of these is that they are valid for any differential equation. The downside is that they are mere approximations.</p>
+<h3 id="euler-method">Euler Method</h3>
+<p>Consider the following initial value problem:</p>
+$$
+y' = F(t, y)
+$$
+$$
+y(t_0) = y_{0}
+$$
+<p>You can use Euler’s method to create a polygonal path that approximates the function on which it is defined.</p>
+<p>You can show that there exists a sequence such that the limit of this polygonal path, as the number of polygons grows from more to more, is the original function that we were trying to approximate.</p>
+<p>Remember that Euler’s method means:</p>
+ 
+$$
+y_{(t+1)} = y(t) + F(t, y(t)) \cdot h
+$$
+ 
+<p>Where \(h\) is the step size. The approximation becomes better as \(h\) decreases. Interestingly, the difference between the value of the differential equation at any point according to Euler’s method and its actual value at that point is linearly bounded by \(h\):</p>
+ $$
+|\phi_h(T) - \phi(T)| < Kh
+ $$
+<p>K is a constant that varies based on the function F and the length of the total interval between the initial value and the point of extrapolation.</p>
+<h3 id="picard-method">Picard Method</h3>
+<p>The Euler Method approximates a point along a curve by tip-toeing along the curve’s edge towards the target number. The Picard Method chooses to approximate functions instead: given an initial guess \((t)\) for a solution in terms of \(y\), the Picard Method can produce a better guess <em>ad infinitum</em> until we reach the desired accuracy.</p>
+<p>The general formula:</p>
+ 
+$$
+y(x) = y_0 + \int_(x_0)^x f(t, y(t)) dt
+$$
+ 
+<p>Your initial guess for \(y(x)\) can be as bad as you want it to be, it can even be a constant. Plug it into the integral as \(y(x)\) and the Picard method will produce something better. If your ODE is of a certain form, for example a linear ODE, successive iterations of Picard’s Method will actually produce a polynomial which could end up being the Taylor series expansion of the analytic solution.</p>
+<p>The disadvantages of this method are that it converges slowly and is difficult to do by hand (unlike the Euler method). However, it does have the advantage of replacing the continuity condition with the weaker <strong>Lipschitz condition</strong>, which is true iff there exists a constant K such that</p>
+ 
+$$
+|f(x_1) - f(x_2)| < K(x_1 - x_2)
+$$
+ 
+<p>In other words, a function meets the Lipschitz condition at a point if all its other points lie within the two sectors of the Cartesian Plane defined by lines of slope +K and -K extending from that point.</p>
+
+
+        </div>
+        <div class="bottomScroll"> </div>
+        <div class="earthWrapper">
+            <img src="../art/earthInSpaceTwiceCropped.png">
+        </div>
+        
+
+    </body>
+</html>

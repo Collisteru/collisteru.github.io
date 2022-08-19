@@ -3,6 +3,7 @@
 
 
 from trimmer import *
+import regex as re
 
 # TODO: Consider using argparse for this
 # Argument 0: The command name (./addToDir.py)
@@ -23,3 +24,17 @@ if __name__ == "__main__":
         body = src.read()
     fullEssay = trimmer(body, sys.argv[2])
     fullEssay.addToDir(sys.argv[1], sys.argv[3], sys.argv[4])
+
+
+    # We use underscores to separate words in the command line. Replace them with spaces for HTML insertion
+    arg1 = re.sub("_", " ", sys.argv[1])
+    arg2 = re.sub("_", " ", sys.argv[2])
+    arg3 = re.sub("_", " ", sys.argv[3])
+    arg4 = re.sub("_", " ", sys.argv[4])
+
+
+
+    with open(arg1, 'r+') as src:
+        body = src.read()
+    fullEssay = trimmer(body, arg2)
+    fullEssay.addToDir(arg1, arg3, arg4)

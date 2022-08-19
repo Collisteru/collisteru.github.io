@@ -1,0 +1,207 @@
+
+<!--Math Easily available -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Collisteru</title>
+        <meta charset="UTF-8">
+        <meta name="description" content=" Tech Stack ">
+        <meta name="author" content="Sean Carter">
+        <link rel="stylesheet" type="text/css" href="../css/style.css" title="style"> 
+    </head>
+    <body>
+        <div id="headbox">
+                <a href="https://collisteru.github.io/index.html" class="headerLink" > <div><b>Collisteru</b></div></a> 
+                <a href="https://collisteru.github.io/writing/writingDirectory.html" class="headerLink" > <div>Writing</div></a> 
+                <a href="https://collisteru.github.io/contact.html" class="headerLink" > <div>Contact</div></a> 
+            </div>
+        <div class="upperScroll"> </div>
+        <div id="mainbox">
+
+        <h1 id="tech-stack">Tech Stack</h1>
+<p>I prefer a tech stack focused on efficiency and independence from proprietary monoliths. Everything should work offline and be free from concerns like forced updates and collisions. This tech stack incompletely fulfills these requirements, but for those with similar priorities it might be of use.</p>
+<p>I use…</p>
+<h2 id="general">General</h2>
+<ul>
+<li>Linux Mint 20.1 x86_64. It’s a fast and secure OS with a good support environment. Besides occasional issues with drivers and peripherals, you can depend on Mint.</li>
+<li>The Kitty terminal for its speed and for the ability to open multiple terminals in the same session with easy hotkeys.</li>
+<li>Xfce desktop environment with Xfwm4 window management and the Chicago95 Theme</li>
+</ul>
+<h2 id="tiddlywiki">Tiddlywiki</h2>
+<ul>
+<li>Tiddlywiki for general life management, including daily journaling, notetaking, and lifetracking; exercise, weight, budgeting, and personal goals, as well as more abstract concerns like large writing projects.
+<ul>
+<li>Plugins: KaTeX, tiddlyroam</li>
+</ul></li>
+</ul>
+<h2 id="writing">Writing</h2>
+<ul>
+<li>Vim
+<ul>
+<li>Proselint for error-checking</li>
+</ul></li>
+<li>Markdown for prose editing</li>
+<li>Pandoc for markdown-to-HTML conversion</li>
+<li>My own script for web content management</li>
+<li>A large series of writing checklists to go through at the end of each draft, like a CI workflow</li>
+</ul>
+<h2 id="coding">Coding</h2>
+<ul>
+<li>Vim for general editing</li>
+</ul>
+<p>./vimrc:</p>
+<pre><code>&quot; Various simple graphical and workflow improvements.
+
+set number &quot; Show line numbers
+set nu rnu &quot; Show *relative* line numbers
+&quot; The effects of the two above lines combine so that the line that the cursor
+&quot; is on shows its line number, and every other line shows how &quot;far away&quot; that
+&quot; line is from the cursor. This is useful for hopping to a line with, for
+&quot; example, 5k (five above) or 4j (four below).
+
+
+&quot; Displays invisible characters
+set list
+set listchars=eol:$,tab:&gt;-,trail:~,extends:&gt;,precedes:&lt;
+
+&quot; autoindents syntactically
+set autoindent
+
+set virtualedit=block &quot; We can now place the cursor anywhere, including after the ends of lines and in the middle of tabs.
+
+&quot; Let&#39;s keep tab indentation lengths standardized.
+set shiftwidth=4 
+set cindent
+
+&quot; Swapfiles get in the way when vim instances are running in the
+&quot; background. Prefer vim-auto-save: https://www.vim.org/scripts/script.php?script_id=4521
+&quot; (Yes, this is dangerous. Disable swapfiles at your own risk.)
+set noswapfile
+let g:auto_save=1
+
+set shortmess=at &quot; Shorter file messages
+set showcmd &quot; Show command at the bottom of the screen
+set awa &quot;Autowriteall. Vim saves automatically upon exit.
+
+filetype plugin indent on &quot; Autodetect filetypes for synta highlighting
+
+&quot; show existing tab with 4 spaces width
+set tabstop=4
+
+&quot; when indenting with &#39;&gt;&#39;, use 4 spaces width
+set shiftwidth=4
+
+&quot; On pressing tab, insert 4 spaces
+set expandtab
+
+&quot; Statusline settings (Thanks, Reman!)
+&quot; https://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+set statusline=
+set statusline+=%7*\[%n]                                  &quot;buffernr
+set statusline+=%1*\ %&lt;%F\                                &quot;File+path
+set statusline+=%2*\ %y\                                  &quot;FileType
+set statusline+=%3*\ %{&#39;&#39;.(&amp;fenc!=&#39;&#39;?&amp;fenc:&amp;enc).&#39;&#39;}      &quot;Encoding
+set statusline+=%3*\ %{(&amp;bomb?\&quot;,BOM\&quot;:\&quot;\&quot;)}\            &quot;Encoding2
+set statusline+=%4*\ %{&amp;ff}\                              &quot;FileFormat (dos/unix..) 
+set statusline+=%5*\ %{&amp;spelllang}\%{HighlightSearch()}\  &quot;Spellanguage &amp; Highlight on?
+set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             &quot;Rownumber/total (%)
+set statusline+=%9*\ col:%03c\                            &quot;Colnr
+set statusline+=%0*\ \ %m%r%w\ %P\ \                      &quot;Modified? Readonly? Top/bot.
+
+function! HighlightSearch()
+  if &amp;hls
+    return &#39;H&#39;
+  else
+    return &#39;&#39;
+  endif
+endfunction
+
+&quot; Syntastic settings
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+&quot; Plugin Manager: Pathogen
+call pathogen#infect()
+execute pathogen#infect()
+
+&quot; Syntax highlighting
+syntax on
+filetype plugin indent on
+
+&quot; Commands on Entering
+autocmd VimEnter * NERDTree &quot; Nerdtree
+
+&quot; Look and Feel
+colorscheme jellybeans
+
+&quot; Tagbar
+nmap &lt;F8&gt; :TagbarToggle&lt;CR&gt;
+
+&quot; Easy compilation for programs with makefile with command &quot;main&quot;
+&quot; &quot;main&quot;)
+command Make FloatermNew --height=0.3
+
+&quot; Compilation that saves error messages in err.txt and outputs in out.txt
+command Makerec make 2&gt; err.txt &gt; out.txt
+
+&quot; Custom Save all
+command S wa
+
+&quot; TO ADD:
+&quot; Command to show tab numbers
+</code></pre>
+<ul>
+<li>PyCharm for large Python projects</li>
+<li>GitKraken for repository management at work</li>
+</ul>
+<h2 id="art">Art</h2>
+<ul>
+<li>Gimp for image editing</li>
+<li>Canva for design, and Inkscape for what Canva can’t do</li>
+<li>Krita for painting</li>
+</ul>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<ul>
+<li>Mint for finances</li>
+<li>Google Calendar for time management</li>
+</ul>
+<hr />
+<ul>
+<li>Anki for spaced repetition</li>
+<li>Firefox for browsing
+<ul>
+<ul>
+<li>Extensions: AdBlock, Grammarly, LeechBlock NG, Shortkeys</li>
+</ul>
+</ul></li>
+<li>qBittorrent for downloads</li>
+<li>KeePassX for passwords</li>
+<li>VMM for Windows Virtual Machines</li>
+</ul>
+<h2 id="want-to-try">Want to Try</h2>
+<ul>
+<li>A Tiling Window Manager</li>
+<li>Emacs</li>
+<li>Evernote</li>
+<li>More Prose-editing plugins for Vim</li>
+</ul>
+
+
+        </div>
+        <div class="bottomScroll"> </div>
+        <div class="earthWrapper">
+            <img src="../art/earthInSpaceTwiceCropped.png">
+        </div>
+        
+
+    </body>
+</html>
