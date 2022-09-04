@@ -1,0 +1,113 @@
+<!-- Math Easily available -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Collisteru</title>
+        <meta charset="UTF-8">
+        <meta name="generator" content="pandoc" />
+        <meta name="description" content=" Tech Stack ">
+        <meta name="author" content="Sean Carter">
+        <link rel="stylesheet" type="text/css" href="../maintenance/style.css" title="style">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../js/melvil_script.js"></script>
+        <script src="https://github.com/ines/termynal"> </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+    </head>
+    <body>
+        <div id="headbox">
+                <a href="https://collisteru.github.io/index.html" class="headerLink" > <div><b>Collisteru</b></div></a>
+                <a href="https://collisteru.github.io/writing/writingDirectory.html" class="headerLink" > <div>Writing</div></a>
+                <a href="https://collisteru.github.io/contact.html" class="headerLink" > <div>Contact</div></a>
+            </div>
+        <div class="upperScroll"> </div>
+        <div id="mainbox">
+<h1 id="on-melvil-the-bookish-cli-database">On Melvil, The Bookish CLI Database</h1>
+<p><a href="https://github.com/Collisteru/Melvil">Melvil</a> is a minimal CLI database for managing content. It started out as a booklist app, but now it can handle any type of media.</p>
+<h2 id="the-problem">The Problem:</h2>
+<p>Before Melvil, there were no open-source personal library tools. For a picture of what the status quo looked like, here are the major options for book management software today:</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 62%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Features</th>
+<th>Platform</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GoodReads</td>
+<td>Public and Private Booklists, Universal Catalog, Recommendations, Reviews</td>
+<td>Web</td>
+<td>Amazon</td>
+</tr>
+<tr class="even">
+<td>LibraryThing</td>
+<td>Public and Private Booklists, Universal Catalog, Recommendations, Reviews</td>
+<td>Web</td>
+<td>LibraryThing</td>
+</tr>
+<tr class="odd">
+<td>Bookly</td>
+<td>Reading Habit Tracking</td>
+<td>Web</td>
+<td>Bookly</td>
+</tr>
+<tr class="even">
+<td>Libib</td>
+<td>Catalogue Management</td>
+<td>Web, Mobile</td>
+<td>Libib</td>
+</tr>
+<tr class="odd">
+<td>The Storygraph</td>
+<td>Recommendations</td>
+<td>Web, Mobile</td>
+<td>The Storygraph</td>
+</tr>
+</tbody>
+</table>
+<p>These apps all have their merits, but none of them is open source. They all require either a mobile phone or internet connectivity. I like tools that users can understand and operate independently, and Melvil fills that gap for content management. As a CLI app, you can run it on anything with a command line. Because Melvil stores your data in a minimal JSON format, there are no mysteries surrounding data storage.</p>
+<p>The tradeoff you make for Melvil is a lack of features. Melvil may never totally replace GoodReads, but for a camping trip or a long flight, it’s the perfect tool.</p>
+<hr />
+<h2 id="features">Features:</h2>
+<p>Melvil has all the features you’d expect in a database. You can:</p>
+<ul>
+<li>Add and remove books.</li>
+<li>Change attributes like authors, priority, and tags.</li>
+<li>Search the database by priority and by tag.</li>
+<li>List the highest-priority book in the database that has a specific, given tag.</li>
+</ul>
+<img src="../art/melvil_demo_1.jpg", width="95%"></img>
+<p>There are also many UX enhancements. With Melvil’s fuzzy search, for example, you can type only part of your target title and the software will know your desires. Typos are not a problem.</p>
+<h2 id="lessons-learned">Lessons Learned:</h2>
+<p>This was the largest open-source project I’ve worked on; its scope brought many interesting elements and challenges I hadn’t encountered before. For example, the decision to add continuous user-software interaction made for a better user experience but also made testing a headache. Finding no way to spin off a subprocess and continuously pass data in and out, friends and I tested by hand.</p>
+<p><small>Come to think of it, an Inquirer testing framework would make a great future project…</small></p>
+<p>Melvil relies on great open-source projects, such as <a href="https://typer.tiangolo.com/">Typer</a> to handle the command line interface and <a href="https://github.com/magmax/python-inquirer">Inquirer</a> for the nice user questions. <a href="https://pypi.org/project/python-Levenshtein/">Python-Levenshtein</a> powers smart search.</p>
+<h2 id="future-improvements">Future Improvements:</h2>
+<p>Melvil is a work in progress. I plan to add at least the following features:</p>
+<ul>
+<li>Enhanced list view that doesn’t tear when the terminal is resized.</li>
+<li>Custom Fields</li>
+<li>Add hash and parity features to the path and the text file to defend against hackery.</li>
+</ul>
+<p>If you’d like to track Melvil’s progress, <a href="https://github.com/Collisteru/Melvil">here’s the GitHub link again.</a></p>
+<p><strong>All the best,</strong></p>
+<p>Collisteru</p>
+        </div>
+        <div class="bottomScroll"> </div>
+        <div class="earthWrapper">
+            <img src="../art/earthInSpaceTwiceCropped.png">
+        </div>
+    </body>
+</html>

@@ -10,7 +10,7 @@
 
 :root {
   --main-color:#DFDBC8;
-  --text:#47422A;
+  --text:#3d2007;
   --heading:#302843;
   --space-bg:#241763;
   --heading-blue:#234c88;
@@ -29,15 +29,15 @@ html {
 
 
 body{
-  
+
   /* Top Right Bottom Left */
   /*Change margins back to 450 px when you can.*/
-  
+
   margin: 50px 0px 117px 0px;
   text-align: center;
   font-size: 1.25em;
   font-family: Helvetica, Arial, sans-serif;
-  color: rgb(71, 66, 42);
+  color: #3d2007;
   min-height: 100vh;
 }
 
@@ -50,16 +50,16 @@ body{
 
 #spaceBG {
   background-image: url("https://collisteru.github.io/images/SpaceBG.png");
-  
+
   position: relative;
-  
+
   top: 0px;
   left: 0px;
 
-  
+
   background-repeat: repeat;
   background-attachment: scroll;
-  
+
 }
 
 /* Ocean */
@@ -72,7 +72,7 @@ body{
 
 /*Center-aligned text for headings, equations, and individual links.*/
 .centered {
-  width: 50%;
+  width: 70%;
   text-align: center;
   margin: auto;
   padding-top: 10px;
@@ -88,17 +88,17 @@ body{
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  
+
   height: 75px;
-  width: 50%;
+  width: 70%;
   min-width: 400px;
-  
+
   margin:auto;
-    
+
   background-color: rgb(223, 219, 200);
   text-align: center;
-  
-  color: rgb(71, 66, 42);
+
+  color: #3d2007;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 75px;
@@ -107,19 +107,17 @@ body{
   border-color: rgb(161, 158, 145);
   border-width: 4px;
   border-style:solid;
-  /* This is a comment*/
- 
 }
 
 #mainbox {
-  
-  width: 50%;
+
+  width: 70%;
   min-width: 400px;
-  
+
   position: relative;
   background-color: rgb(223, 219, 200);
-  color: rgb(71, 66, 42);
-  
+  color: #3d2007;
+
   margin-bottom: 60px;
   min-height: 297px;
 
@@ -129,7 +127,7 @@ body{
   margin-left: auto;
   margin-bottom: 0px;
 
-  
+
   padding-bottom: 20px;
 
 }
@@ -159,35 +157,35 @@ body{
 
 .upperScroll {
   display: inline-block;
-  width: 50%;
+  width: 70%;
   min-width: 400px;
   background-position: left bottom;
-  margin-bottom: -57px;
-  height: 155px;
+  margin-bottom: -59px;
+  height: 150px;
 
   content: url(https://collisteru.github.io/art/scrollEnds.png);
-  
+
 }
 
 .bottomScroll {
   display: inline-block;
-  
-  width: 55%;
+
+  width: 76.8%;
   min-width: 400px;
   background-position: left bottom;
   margin-bottom: -57px;
   height: 130px;
 
   content: url(https://collisteru.github.io/art/scrollEndBottom.png);
-  
-  
+
+
 }
 
 .earth {
   background-position: left bottom;
   margin-bottom: 100px;
   content: url(../art/earthInSpaceCropped.png);
-  
+
 }
 
 /* ~~HEADING LINKS~~ */
@@ -306,7 +304,7 @@ h2{
 
 /*Heading Three: SubsectionTitles*/
 h3{
-  font-size: 1em; 
+  font-size: 1em;
   font-family: "Source Serif Regular"
 }
 
