@@ -22,7 +22,7 @@ if __name__ == "__main__":
 #     print("sys.argv[4]: ", sys.argv[4]) # TESTDSCRPT
     with open(sys.argv[1], 'r+') as src:
         body = src.read()
-    # trimmer(essayBody=src.read(), content=testing...)
+    # trimmer(essayBody=melvil.read(), content=testing...)
     fullEssay = trimmer(body, sys.argv[2])
     content = fullEssay.getContent(sys.argv[1])
     # Raise nothing to repeat for the below line

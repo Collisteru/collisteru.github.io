@@ -36,7 +36,7 @@ WRAPPER = '''
         </div>
         <div class="bottomScroll"> </div>
         <div class="earthWrapper">
-            <img src="../art/earthInSpaceTwiceCropped.png">
+            <img melvil="../art/earthInSpaceTwiceCropped.png">
         </div>
         
 
