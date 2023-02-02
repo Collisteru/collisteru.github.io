@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # WRAP.PY
 # This script automatically wraps pages in the CSS above and below the main text of the website.
 
