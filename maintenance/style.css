@@ -23,7 +23,7 @@
 
 html {
   min-height: 100%;
-  background-color: rgb(36, 23, 99);
+  background-color: rgb(00, 00, 00);
   background-image: url("https://collisteru.github.io/art/newDrawnSpaceBGSmall.png");
 }
 
@@ -149,14 +149,15 @@ body{
 }
 
 .earthWrapper img::before {
-  background-color: var(--deep-blue);
+  background-color: var(black);
 
-  border: solid 30px green;
 }
 
 
 .upperScroll {
+  background-color: #DFDBC8;
   display: inline-block;
+
   width: 70%;
   min-width: 400px;
   background-position: left bottom;
@@ -168,6 +169,7 @@ body{
 }
 
 .bottomScroll {
+  background-color: #DFDBC8;
   display: inline-block;
 
   width: 76.8%;
