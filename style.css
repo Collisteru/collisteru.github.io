@@ -1,11 +1,20 @@
 /* Clean blue page with green highlights */
+
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src:
+    url("/fonts/ms_sans_serif.woff2") format("woff2"),
+    url("/fonts/ms_sans_serif.woff") format("woff");
+  font-weight: normal;
+}
+
 :root {
   color-scheme: dark;
   --bg: #0f2947;
   --surface: rgba(17, 82, 146, 0.14);
   --surface-strong: rgba(17, 82, 146, 0.22);
-  --text: #f5fbff;
-  --muted: #c8e8ff;
+  --text: #000000;
+  --muted: #000;
   --accent: #55c57a;
   --accent-strong: #3c9c56;
   --border: rgba(255, 255, 255, 0.14);
@@ -116,14 +125,7 @@ html,
 body {
   min-height: 100%;
   margin: 0;
-  font-family:
-    Cambria,
-    Cochin,
-    Georgia,
-    Times,
-    "Times New Roman",
-    serif serif;
-
+  font-family: "Pixelated MS Sans Serif";
   color: var(--text);
 }
 
@@ -143,7 +145,7 @@ h2,
 h3,
 h4 {
   margin: 1.4rem 0 0.6rem;
-  color: #e5f7ff;
+  color: #000;
   letter-spacing: -0.03em;
 }
 
@@ -223,7 +225,7 @@ body > .container {
 }
 
 .links {
-  margin-bottom: 1.6rem;
+  margin-bottom: 100px;
 }
 
 .tabs {
