@@ -108,6 +108,7 @@ summary:focus {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 4H6v7h1v-1h1V9h1V8h1V7H9V6H8V5H7V4z' fill='%23000'/%3E%3C/svg%3E");
 }
 button {
+  font-size: large;
   border: none;
   background: #ece9d8;
   box-shadow:
@@ -437,6 +438,7 @@ input[type="range"].has-box-indicator::-moz-range-thumb {
   margin-right: 24px;
 }
 .title-bar-controls button {
+  font-size: large;
   padding: 0;
   display: block;
   min-width: 16px;
@@ -563,6 +565,7 @@ menu[role="tablist"] button {
   color: #222;
   text-decoration: none;
   min-width: unset;
+  font-size: large;
 }
 menu[role="tablist"] button[aria-selected="true"] {
   padding-bottom: 2px;

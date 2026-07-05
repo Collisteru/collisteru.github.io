@@ -15,7 +15,7 @@
   --surface-strong: rgba(17, 82, 146, 0.22);
   --text: #000000;
   --muted: #000;
-  --accent: #55c57a;
+  --accent: --AliceBlue;
   --accent-strong: #3c9c56;
   --border: rgba(255, 255, 255, 0.14);
   --shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
@@ -105,19 +105,19 @@
      ease-in-out between each keyframe keeps transitions smooth. */
 @keyframes colorLoop {
   0% {
-    background-color: var(--black);
+    background-color: #091db3;
   }
   25% {
-    background-color: var(--dark_gray);
+    background-color: #081682;
   }
   50% {
-    background-color: var(--gray_blue);
+    background-color: #020830;
   }
   75% {
-    background-color: var(--dark_gray);
+    background-color: #081682;
   }
   100% {
-    background-color: var(--black);
+    background-color: #091db3;
   }
 }
 
@@ -158,6 +158,10 @@ h2 {
   text-align: center;
 }
 
+p {
+  font-family: sans-serif;
+}
+
 #floated {
   float: left;
   width: 150px;
@@ -173,7 +177,7 @@ span {
 }
 
 p {
-  font-size: 1.03rem;
+  font-size: 1.8rem;
   margin: 0 0 1.4rem;
 }
 
@@ -182,17 +186,20 @@ em {
   margin-bottom: 1.6rem;
   color: var(--accent);
   font-style: normal;
-  letter-spacing: 0.02em;
 }
 
 body a {
-  color: var(--accent);
+  color: #081682;
   text-decoration: none;
   font-weight: 600;
 }
 
 body a:hover {
   color: #b3ffd8;
+}
+
+li {
+  font-size:;
 }
 
 a,
@@ -222,10 +229,6 @@ button:hover {
 body > .container {
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
-}
-
-.links {
-  margin-bottom: 100px;
 }
 
 .tabs {
@@ -350,8 +353,6 @@ tr:hover {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
-  border: 2px solid var(--accent);
   display: block;
   margin: 1.2rem;
 }
@@ -360,4 +361,29 @@ td img {
   max-width: 200px;
   max-height: 200px;
   margin: 0;
+}
+
+ul {
+  /* font-family: "Pixelated MS Sans Serif"; */
+  font-size: 1.2rem;
+}
+
+/* -------- Bigger fonts everywhere except <p> --------
+   These need to out-rank xp.css (loaded after this file), hence
+   the `body` prefix / attribute selectors for extra specificity.
+   <p> keeps its own explicit sizes and is unaffected. */
+body .window {
+  font-size: 1.2rem; /* xp.css: 11px — inherited by tables, cells, etc. */
+}
+
+body .title-bar {
+  font-size: 1.1rem; /* xp.css: 13px */
+}
+
+body h2 {
+  font-size: 3rem; /* xp.css: 2.5rem */
+}
+
+menu[role="tablist"] button {
+  font-size: 1.1rem; /* xp.css button: 11px */
 }

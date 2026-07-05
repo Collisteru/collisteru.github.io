@@ -22,27 +22,35 @@
       </div>
 
       <div class="window-body">
-        <h1>Sean Carter</h1>
 
-        <p>
-          <img
-            id="floated"
-            src="./delos_cropped.jpeg"
-            style="width: 25%; height: 50%"
-            alt="Sean Image"
-            margin="50px"
-            buffer="50px"
-          />
-          Hi! I'm a computer programmer specializing in AI. Professionally, I'm
-          a recent graduate from the University of Colorado, where I attained a
-          Bachelor's Degree in Computer Science with a minor in Applied Math. My
-          work concentrates on AI agents and the intersection of computer
-          science and the humanities. I think AI is the most important
-          technology of the century and am interested in making it safe and
-          effective.
-        </p>
+        <pre
+          style="
+            font-family: monospace;
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+            overflow-x: auto;
+            background: transparent;
+            color: inherit;
+            width: fit-content;
+            max-width: 100%;
+            margin: 0 auto 16px;
+          "
+        >         ███████╗  ███████╗   █████╗   ███╗   ██╗           
+         ██╔════╝  ██╔════╝  ██╔══██╗  ████╗  ██║           
+         ███████╗  █████╗    ███████║  ██╔██╗ ██║           
+         ╚════██║  ██╔══╝    ██╔══██║  ██║╚██╗██║           
+         ███████║  ███████╗  ██║  ██║  ██║ ╚████║           
+         ╚══════╝  ╚══════╝  ╚═╝  ╚═╝  ╚═╝  ╚═══╝           
+                                                            
+ ██████╗   █████╗    ██████╗   ████████╗  ███████╗  ██████╗ 
+██╔════╝  ██╔══██╗   ██╔══██╗  ╚══██╔══╝  ██╔════╝  ██╔══██╗
+██║       ███████║   ██████╔╝     ██║     █████╗    ██████╔╝
+██║       ██╔══██║   ██╔══██╗     ██║     ██╔══╝    ██╔══██╗
+╚██████╗  ██║  ██║   ██║  ██║     ██║     ███████╗  ██║  ██║
+ ╚═════╝  ╚═╝  ╚═╝   ╚═╝  ╚═╝     ╚═╝     ╚══════╝  ╚═╝  ╚═╝</pre>
 
-        <div class="links" style="font-size: large; text-align: center">
+      \
+        <div class="links" style="font-size: xx-large; text-align: center">
           <a href="./resume.pdf">Resume</a> |
           <a href="https://www.linkedin.com/in/sean-carter-software-engineer/"
             >LinkedIn</a
@@ -50,6 +58,27 @@
           |
           <a href="https://collisteru.net">Personal Website</a>
         </div>
+        <p style="font-size: 1.8rem;">
+          <img
+            id="floated"
+            src="./delos_cropped.jpeg"
+            style="width: 25%; height: 50%;"
+            alt="Sean Image"
+            margin="50px"
+            buffer="50px"
+          />
+          Hi! I'm a computer programmer specializing in AI. Professionally, I'm
+          a recent graduate from the University of Colorado, where I attained a
+          Bachelor's Degree in Computer Science with a minor in Applied Math. I will return in Fall 2026 to study for a Master's Degree.
+          
+        </p> <p>My
+          work concentrates on AI agents and the intersection of computer
+          science and the humanities. I think AI is the most important
+          technology of the century and aim to make it safe and
+          effective. Right now I'm working on <a href="https://radix.ink/_home">radix</a>, a better way to display Wiktionary's database.
+        </p>
+
+
 
         <menu role="tablist" style="margin-top: 200px">
           <button aria-selected="true" aria-controls="software">
@@ -61,7 +90,7 @@
 
         <article role="tabpanel" id="software">
           <h2>Software</h2>
-          <p>Selected projects and research work.</p>
+          <p style="font-size: 1.8rem;">Selected projects and research work.</p>
 
           <table>
             <tr>
@@ -71,8 +100,8 @@
             </tr>
             <tr>
               <td>
-                EFFECTS OF PERSONA PROMPTING ON LANGUAGE AGENTS IN A COMPETITIVE
-                HIDDEN INFORMATION GAME
+                <a href="./thesis.pdf">EFFECTS OF PERSONA PROMPTING ON LANGUAGE AGENTS IN A COMPETITIVE
+                HIDDEN INFORMATION GAME</a>
               </td>
               <td>
                 <strong>
@@ -85,7 +114,7 @@
               <td><img src="./these_petit_image.png" alt="Thesis Image" /></td>
             </tr>
             <tr>
-              <td>Phonopro</td>
+              <td><a href="https://phonopro.netlify.app/">Phonopro</a></td>
               <td>
                 A website to teach the International Phonetic Alphabet. Won
                 first place in the 2024 Blasterhacks Hackathon.
@@ -98,19 +127,31 @@
         <article role="tabpanel" hidden id="tutoring">
           <h2>Tutoring</h2>
           <p>
-            My tutoring experience will be added here soon. I’m looking forward
-            to sharing the subjects I support, my teaching approach, and the
-            ways I’ve helped students grow.
+            I tutor the following subjects: 
+            <ul>
+              <li>The calculus sequence, including
+            differential equations and multivariate calculus</li>
+            <li>Competition math preparation (AMC 8 and 10). </li>
+            <li>Programming in
+            Python and C++</li>
+            <li>Piano</li>
+            <li>Writing</li>
+            </ul>   
           </p>
         </article>
 
         <article role="tabpanel" hidden id="contact">
           <h2>Contact</h2>
           <p>
-            <img src="./namen.png" width="600px" alt="Email" />
+            <img
+              src="./namen.png"
+              width="600px"
+              alt="Email"
+              style="display: block; margin: 0 auto"
+            />
           </p>
           <p>
-            Feel free to reach out with questions, collaboration ideas, or
+            Reach out with questions, collab proposals, or
             opportunities to connect.
           </p>
         </article>
@@ -121,7 +162,7 @@
       // Generates the 17 x 8 = 136 cells. No randomness here —
       // the desync is handled entirely in CSS via animation-delay.
       const grid = document.querySelector(".bg-grid");
-      for (let i = 0; i < 17 * 8; i++) {
+      for (let i = 0; i < 34 * 16; i++) {
         const cell = document.createElement("div");
         cell.className = "cell";
         grid.appendChild(cell);
