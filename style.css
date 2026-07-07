@@ -164,8 +164,7 @@ p {
 
 #floated {
   float: left;
-  width: 250px; /* fixed px so it renders the same size on every screen */
-  background: red;
+  width: 160px; /* fixed px so it renders the same size on every screen */
 }
 
 p,
