@@ -164,7 +164,7 @@ p {
 
 #floated {
   float: left;
-  width: 150px;
+  width: 250px; /* fixed px so it renders the same size on every screen */
   background: red;
 }
 
@@ -176,8 +176,15 @@ span {
   color: var(--muted);
 }
 
+/* One size for all body text: paragraphs, lists, and table cells */
+p,
+li,
+td,
+th {
+  font-size: 1.2rem;
+}
+
 p {
-  font-size: 1.8rem;
   margin: 0 0 1.4rem;
 }
 
@@ -196,10 +203,6 @@ body a {
 
 body a:hover {
   color: #b3ffd8;
-}
-
-li {
-  font-size:;
 }
 
 a,
@@ -386,4 +389,88 @@ body h2 {
 
 menu[role="tablist"] button {
   font-size: 1.1rem; /* xp.css button: 11px */
+}
+
+/* Rainbow flash — standalone class, apply to any element */
+.rainbow-flash {
+  font-size: 4rem;
+  animation: rainbowFlash 2.5s linear infinite;
+}
+
+@keyframes rainbowFlash {
+  0% {
+    color: #e00000;
+  }
+  14% {
+    color: #e07000;
+  }
+  28% {
+    color: #c8a800;
+  }
+  42% {
+    color: #00a000;
+  }
+  57% {
+    color: #0040e0;
+  }
+  71% {
+    color: #4b0082;
+  }
+  85% {
+    color: #8f00ff;
+  }
+  100% {
+    color: #e00000;
+  }
+}
+
+/* Mobile responsiveness */
+.mobile-name {
+  display: none;
+}
+
+.ascii-name {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-name {
+    display: block;
+    margin: 0 0 1rem;
+  }
+
+  .ascii-name {
+    display: none;
+  }
+
+  body > .window {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0;
+  }
+
+  .window-body {
+    min-height: 100vh;
+  }
+
+  .title-bar {
+    display: none;
+  }
+
+  /* No tabs on mobile: hide the tab bar and show every
+     panel stacked one after the other (overrides [hidden]).
+     !important needed because xp.css loads after this file
+     and sets display: flex at equal specificity. */
+  menu[role="tablist"] {
+    display: none !important;
+  }
+
+  article[role="tabpanel"][hidden] {
+    display: block;
+  }
+
+  th,
+  td {
+    padding: 0.5rem 0.8rem;
+  }
 }
