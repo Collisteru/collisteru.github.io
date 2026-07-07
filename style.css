@@ -459,6 +459,12 @@ menu[role="tablist"] {
     margin: 0 0 1rem;
   }
 
+  /* Photo on its own line, text always below it (no wrapping) */
+  #floated {
+    float: none;
+    margin: 0 auto 1.2rem;
+  }
+
   .ascii-name {
     display: none;
   }
