@@ -391,6 +391,16 @@ menu[role="tablist"] button {
   font-size: 1.1rem; /* xp.css button: 11px */
 }
 
+/* The intro image is floated left; without clearing, the tablist
+   can slide up beside it when the intro text is short. */
+menu[role="tablist"] {
+  clear: both;
+}
+
+.links {
+  font-size: 2rem; /* was inline xx-large; rem so it scales on mobile */
+}
+
 /* Rainbow flash — standalone class, apply to any element */
 .rainbow-flash {
   font-size: 3rem;
@@ -439,6 +449,11 @@ menu[role="tablist"] button {
 }
 
 @media (max-width: 768px) {
+  /* Scale all rem-based text to 70% of its desktop size */
+  html {
+    font-size: 70%;
+  }
+
   .mobile-name {
     display: block;
     margin: 0 0 1rem;
