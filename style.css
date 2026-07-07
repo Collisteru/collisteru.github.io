@@ -393,7 +393,7 @@ menu[role="tablist"] button {
 
 /* Rainbow flash — standalone class, apply to any element */
 .rainbow-flash {
-  font-size: 4rem;
+  font-size: 3rem;
   animation: rainbowFlash 2.5s linear infinite;
 }
 
@@ -426,6 +426,11 @@ menu[role="tablist"] button {
 
 /* Mobile responsiveness */
 .mobile-name {
+  display: none;
+}
+
+/* Mobile-only project list in the Software section */
+.software-list {
   display: none;
 }
 
@@ -472,5 +477,14 @@ menu[role="tablist"] button {
   th,
   td {
     padding: 0.5rem 0.8rem;
+  }
+
+  /* Software section: swap the table for the plain bulleted list */
+  .software-list {
+    display: block;
+  }
+
+  #software table {
+    display: none;
   }
 }
